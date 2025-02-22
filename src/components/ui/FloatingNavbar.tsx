@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { FaHome, FaUser, FaEnvelope, FaBriefcase, FaCog } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBriefcase } from "react-icons/fa";
 import Link from "next/link";
 
 const NAV_LINKS = [
