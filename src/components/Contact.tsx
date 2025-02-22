@@ -14,6 +14,11 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const handleEmailClick = () => {
+    const email = "8E5oE@example.com";
+    console.log("Sending email to:", email);
+  };
+
   return (
     <section id="contact-section" className="py-24 bg-darkBg text-white">
       <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
@@ -47,7 +52,10 @@ const Contact = () => {
         </div>
 
         {/* Form liên hệ */}
-        <form className="mt-12 bg-transparent p-6 rounded-lg">
+        <form
+          className="mt-12 bg-transparent p-6 rounded-lg"
+          onSubmit={handleEmailClick}
+        >
           {["Your Name", "Your Email", "Message"].map((label, index) => (
             <div key={index} className="mt-4">
               <label className="block text-lg font-medium">{label}</label>

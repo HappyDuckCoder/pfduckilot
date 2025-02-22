@@ -12,10 +12,13 @@ const SplitText: React.FC<SplitTextProps> = ({ text, className = "" }) => {
   const letters = Array.from(text);
 
   const controls = useAnimation();
-
   const ref = useRef<HTMLDivElement>(null);
 
-  const inView = useInView(ref, { once: false, amount: 0.5 });
+  // Kiểm tra nếu đang chạy trên client
+  const inView =
+    typeof window !== "undefined"
+      ? useInView(ref, { once: false, amount: 0.5 })
+      : false;
 
   useEffect(() => {
     if (inView) {
