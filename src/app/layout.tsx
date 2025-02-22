@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import FloatingNavbar from "@/components/ui/FloatingNavbar";
+// import FloatingNavbar from "@/components/ui/FloatingNavbar";
 
 export const metadata: Metadata = {
   title: "Duck",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-x-hidden font-sans">
-        <FloatingNavbar />
+        {/* <FloatingNavbar /> */}
         {children}
         <Footer />
       </body>
