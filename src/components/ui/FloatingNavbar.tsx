@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaHome, FaUser, FaEnvelope, FaBriefcase, FaCog } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBriefcase } from "react-icons/fa";
 
 // Danh sách các mục trong navbar
 const navItems = [
