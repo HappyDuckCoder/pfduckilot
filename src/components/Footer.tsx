@@ -1,3 +1,5 @@
+"use client";
+
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {

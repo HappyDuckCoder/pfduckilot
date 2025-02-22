@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Project from "./Project";
 import SplitText from "./ui/SplitText";
