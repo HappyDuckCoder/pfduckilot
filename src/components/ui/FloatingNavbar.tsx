@@ -17,8 +17,15 @@ const FloatingNavbar = () => {
   let lastScrollY = 0;
 
   useEffect(() => {
+    // Kiểm tra nếu đang chạy trên client
+    if (typeof window === "undefined") return;
+
     const handleScroll = () => {
-      setVisible(window.scrollY < lastScrollY);
+      if (window.scrollY > lastScrollY) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
       lastScrollY = window.scrollY;
     };
 
