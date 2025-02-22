@@ -24,6 +24,8 @@ const FloatingNavbar = () => {
   const lastScrollY = useRef(0);
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // Đảm bảo chỉ chạy trên client
+
     const handleScroll = () => {
       if (window.scrollY > lastScrollY.current) {
         setVisible(false);
