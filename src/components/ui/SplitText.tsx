@@ -15,10 +15,7 @@ const SplitText: React.FC<SplitTextProps> = ({ text, className = "" }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   // Kiểm tra nếu đang chạy trên client
-  const inView =
-    typeof window !== "undefined"
-      ? useInView(ref, { once: false, amount: 0.5 })
-      : false;
+  const inView = useInView(ref, { once: false, amount: 0.5 });
 
   useEffect(() => {
     if (inView) {
