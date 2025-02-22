@@ -5,7 +5,7 @@ import { FaHome, FaUser, FaEnvelope, FaBriefcase } from "react-icons/fa";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "#home-section", icon: <FaHome size={26} />, label: "Home" },
+  { href: "#hero-section", icon: <FaHome size={26} />, label: "Home" },
   { href: "#about-section", icon: <FaUser size={26} />, label: "About" },
   {
     href: "#project-section",
