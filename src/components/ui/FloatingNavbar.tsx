@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaHome, FaUser, FaEnvelope, FaBriefcase } from "react-icons/fa";
 
@@ -14,19 +14,19 @@ const navItems = [
 
 const FloatingNavbar = () => {
   const [visible, setVisible] = useState(true);
-  let lastScrollY = 0;
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     // Kiểm tra nếu đang chạy trên client
     if (typeof window === "undefined") return;
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY > lastScrollY.current) {
         setVisible(false);
       } else {
         setVisible(true);
       }
-      lastScrollY = window.scrollY;
+      lastScrollY.current = window.scrollY; // Cập nhật giá trị của useRef
     };
 
     window.addEventListener("scroll", handleScroll);
