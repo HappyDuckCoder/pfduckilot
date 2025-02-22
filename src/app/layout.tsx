@@ -15,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <FloatingNavbar />
-      <body className="overflow-x-hidden font-sans">{children}</body>
-      <Footer />
+      <body className="overflow-x-hidden font-sans">
+        <FloatingNavbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
