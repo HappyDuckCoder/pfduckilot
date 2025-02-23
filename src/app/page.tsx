@@ -1,8 +1,12 @@
+"use client";
+
+import FloatingNavbar from "@/components/ui/FloatingNavbar";
 // import About from "@/components/About";
 // import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 // import MyProject from "@/components/MyProject";
 // import NoiseBackground from "@/components/NoiseBackground";
+// import { Suspense } from "react";
 import React from "react";
 
 const Home = () => {
@@ -12,18 +16,21 @@ const Home = () => {
       className="relative flex justify-center items-center flex-col overflow-x-hidden mx-auto"
     >
       <div className="w-full">
-        <Hero />
-        {/* <NoiseBackground mode="light" intensity={0.1}>
-        </NoiseBackground> */}
-        {/* <NoiseBackground mode="dark" intensity={0.1}>
-          <About />
-        </NoiseBackground>
-        <NoiseBackground mode="light" intensity={0.1}>
-          <MyProject />
-        </NoiseBackground>
-        <NoiseBackground mode="dark" intensity={0.1}>
-          <Contact />
-        </NoiseBackground> */}
+        <FloatingNavbar />
+        {/* <Suspense fallback={<div>Loading...</div>}>
+          <NoiseBackground mode="light" intensity={0.1}>
+            <Hero />
+          </NoiseBackground>
+          <NoiseBackground mode="dark" intensity={0.1}>
+            <About />
+          </NoiseBackground>
+          <NoiseBackground mode="light" intensity={0.1}>
+            <MyProject />
+          </NoiseBackground>
+          <NoiseBackground mode="dark" intensity={0.1}>
+            <Contact />
+          </NoiseBackground>
+        </Suspense> */}
       </div>
     </main>
   );

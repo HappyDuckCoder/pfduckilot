@@ -14,16 +14,17 @@ const SplitText: React.FC<SplitTextProps> = ({ text, className = "" }) => {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
 
-  // Kiểm tra nếu đang chạy trên client
-  const inView = useInView(ref, { once: false, amount: 0.5 });
+  const isInView = useInView(ref, { once: false, amount: 0.5 });
 
   useEffect(() => {
-    if (inView) {
+    if (!ref.current) return;
+
+    if (isInView) {
       controls.start("visible");
     } else {
       controls.start("hidden");
     }
-  }, [inView, controls]);
+  }, [isInView, controls]);
 
   const containerVariants = {
     hidden: {},

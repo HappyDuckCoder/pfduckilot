@@ -17,10 +17,11 @@ function hexToRgb(hex: string) {
       .join("");
   }
   const intVal = parseInt(hex, 16);
-  const r = (intVal >> 16) & 255;
-  const g = (intVal >> 8) & 255;
-  const b = intVal & 255;
-  return { r, g, b };
+  return {
+    r: (intVal >> 16) & 255,
+    g: (intVal >> 8) & 255,
+    b: intVal & 255,
+  };
 }
 
 const NoiseBackground: React.FC<NoiseBackgroundProps> = ({
@@ -28,9 +29,13 @@ const NoiseBackground: React.FC<NoiseBackgroundProps> = ({
   intensity = 0.08,
   children,
 }) => {
-  const [noiseDataUrl, setNoiseDataUrl] = useState<string>("");
+  const [noiseDataUrl, setNoiseDataUrl] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log("window", typeof window);
+
+    if (typeof window === "undefined") return;
+
     const canvas = document.createElement("canvas");
     const width = 200;
     const height = 200;
@@ -40,18 +45,17 @@ const NoiseBackground: React.FC<NoiseBackgroundProps> = ({
     if (!ctx) return;
 
     const noiseColorHex = mode === "dark" ? "#eeede9" : "#131313";
-    const noiseColor = hexToRgb(noiseColorHex);
+    const { r, g, b } = hexToRgb(noiseColorHex);
 
     const imageData = ctx.createImageData(width, height);
     for (let i = 0; i < imageData.data.length; i += 4) {
-      imageData.data[i] = noiseColor.r;
-      imageData.data[i + 1] = noiseColor.g;
-      imageData.data[i + 2] = noiseColor.b;
+      imageData.data[i] = r;
+      imageData.data[i + 1] = g;
+      imageData.data[i + 2] = b;
       imageData.data[i + 3] = Math.floor(Math.random() * 255 * intensity);
     }
     ctx.putImageData(imageData, 0, 0);
-    const dataUrl = canvas.toDataURL("image/png");
-    setNoiseDataUrl(dataUrl);
+    setNoiseDataUrl(canvas.toDataURL("image/png"));
   }, [mode, intensity]);
 
   const wrapperBackgroundColor = mode === "dark" ? "#131313" : "#eeede9";

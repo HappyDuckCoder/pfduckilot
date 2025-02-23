@@ -11,7 +11,7 @@ const Portrait = () => {
         src="/public/cv.jpg"
         width={200}
         height={200}
-        className="rounded-2xl w-full object-cover"
+        className="rounded-2xl w-full object-cover hover:scale-105 transition-transform"
         priority
       />
     </div>
