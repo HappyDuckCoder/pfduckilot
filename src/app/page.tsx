@@ -8,6 +8,8 @@ import NoiseBackground from "@/components/NoiseBackground";
 import React, { useState, useEffect } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Tăng thời gian chút để loading animation mượt hơn
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,6 +27,7 @@ const Home = () => {
       id="home-section"
       className="relative flex justify-center items-center flex-col overflow-x-hidden mx-auto"
     >
+      {/* Màn hình Loading */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: isLoading ? 1 : 0 }}
@@ -36,6 +39,30 @@ const Home = () => {
         <LoadingScreen />
       </motion.div>
 
+      {/* Nút "View My Blog" với hiệu ứng mũi tên */}
+      {!isLoading && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="fixed top-5 right-5 z-50 flex items-center gap-3 px-4 py-2 bg-zinc-700/90 rounded-full shadow-lg"
+        >
+          <motion.div
+            animate={{ x: [0, 5, 0] }}
+            transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
+          >
+            <FaArrowRight className="text-gray-200 text-lg" />
+          </motion.div>
+          <Link
+            href="/blog"
+            className="text-gray-200 text-lg font-medium hover:underline"
+          >
+            View My Blog
+          </Link>
+        </motion.div>
+      )}
+
+      {/* Nội dung chính */}
       {!isLoading && (
         <motion.div
           initial={{ opacity: 0 }}
