@@ -5,7 +5,6 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import MyProject from "@/components/MyProject";
 import NoiseBackground from "@/components/NoiseBackground";
-// import { Suspense } from "react";
 import React from "react";
 
 const Home = () => {
@@ -27,20 +26,6 @@ const Home = () => {
         <NoiseBackground mode="dark" intensity={0.1}>
           <Contact />
         </NoiseBackground>
-        {/* <Suspense fallback={<div>Loading...</div>}>
-          <NoiseBackground mode="light" intensity={0.1}>
-            <Hero />
-          </NoiseBackground>
-          <NoiseBackground mode="dark" intensity={0.1}>
-            <About />
-          </NoiseBackground>
-          <NoiseBackground mode="light" intensity={0.1}>
-            <MyProject />
-          </NoiseBackground>
-          <NoiseBackground mode="dark" intensity={0.1}>
-            <Contact />
-          </NoiseBackground>
-        </Suspense> */}
       </div>
     </main>
   );

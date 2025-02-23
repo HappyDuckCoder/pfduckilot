@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 interface Project {
@@ -43,12 +44,13 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       </div>
 
       {/* Link xem project */}
-      <a
+      <Link
         href={project.link}
         className="block mt-4 text-[#751d5b] hover:underline font-medium"
+        target="_blank"
       >
         View Project →
-      </a>
+      </Link>
     </div>
   );
 };

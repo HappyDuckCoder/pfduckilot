@@ -7,36 +7,38 @@ import SplitText from "./ui/SplitText";
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Patient Management System",
     description:
-      "An online store with Next.js, Tailwind, and Stripe payment integration.",
-    techStack: ["Next.js", "Tailwind", "MongoDB", "Stripe"],
-    image: "public/projects/project2.5.png",
-    link: "#",
+      "A web application for managing patient records, scheduling appointments, and handling payments seamlessly using Stripe integration.",
+    techStack: ["Next.js", "MongoDB", "Clerk"],
+    image: "Image/p1.png",
+    link: "https://patient-git-main-happyduckcoders-projects.vercel.app/",
   },
   {
     id: 2,
-    title: "AI Chatbot",
-    description: "An AI-powered chatbot using OpenAI API for smart responses.",
-    techStack: ["React", "OpenAI API", "Node.js"],
-    image: "public/projects/project2.5.png",
-    link: "#",
+    title: "8/3 Celebration Project",
+    description:
+      "A fun project that generates personalized messages and images using OpenAI API to celebrate International Women's Day on March 8th.",
+    techStack: ["Motion-framer", "Groq API", "Liveblocks"],
+    image: "Image/p2.png",
+    link: "https://83test-git-featrealtime-happyduckcoders-projects.vercel.app/",
   },
   {
     id: 3,
-    title: "Social Media App",
+    title: "Searching Web Application",
     description:
-      "A fullstack social media platform with real-time chat and notifications.",
-    techStack: ["Next.js", "Prisma", "Socket.io"],
-    image: "public/projects/project2.5.png",
-    link: "#",
+      "A powerful web application that allows users to search for real-time information efficiently. Features include advanced filtering, instant search results, and optimized performance for large datasets.",
+    techStack: ["Taivily", "Duckduckgo", "API service", "Google API"],
+    image: "Image/p3.png",
+    link: "https://searching-git-main-happyduckcoders-projects.vercel.app/",
   },
   {
     id: 4,
-    title: "Finance Tracker",
-    description: "A personal finance tracking app with data visualization.",
-    techStack: ["React", "D3.js", "Firebase"],
-    image: "public/projects/project2.5.png",
+    title: "AI Surveillance - Detect Child Abuse",
+    description:
+      "An AI-powered surveillance system that detects abusive behavior towards children using computer vision and real-time Firebase notifications.",
+    techStack: ["LSTM", "OpenCV", "Firebase", "React-native", "Expo-go"],
+    image: "Image/p4.jpg",
     link: "#",
   },
 ];

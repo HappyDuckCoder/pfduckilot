@@ -15,8 +15,8 @@ const Marquee = () => {
   ];
 
   const lowerMarquee = [
-    { src: "public/techStack/09.svg", text: "React" },
     { src: "public/techStack/08.svg", text: "Java" },
+    { src: "public/techStack/09.svg", text: "React" },
     { src: "public/techStack/10.svg", text: "Git" },
     { src: "public/techStack/11.svg", text: "GitHub" },
     { src: "public/techStack/12.svg", text: "VS Code" },
