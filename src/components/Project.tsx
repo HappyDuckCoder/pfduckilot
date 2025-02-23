@@ -43,9 +43,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         ))}
       </div>
 
-      {/* Link xem project */}
       <Link
-        href={project.link}
+        // href={project.link}
+        href={"/project"}
         className="block mt-4 text-[#751d5b] hover:underline font-medium"
         target="_blank"
       >
