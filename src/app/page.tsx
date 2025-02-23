@@ -12,9 +12,9 @@ const Home = () => {
       className="relative flex justify-center items-center flex-col overflow-x-hidden mx-auto"
     >
       <div className="w-full">
-        <NoiseBackground mode="light" intensity={0.1}>
-          <Hero />
-        </NoiseBackground>
+        <Hero />
+        {/* <NoiseBackground mode="light" intensity={0.1}>
+        </NoiseBackground> */}
         {/* <NoiseBackground mode="dark" intensity={0.1}>
           <About />
         </NoiseBackground>
