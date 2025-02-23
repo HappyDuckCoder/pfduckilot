@@ -2,9 +2,9 @@
 
 // import About from "@/components/About";
 // import Contact from "@/components/Contact";
-// import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 // import MyProject from "@/components/MyProject";
-import NoiseBackground from "@/components/NoiseBackground";
+// import NoiseBackground from "@/components/NoiseBackground";
 // import { Suspense } from "react";
 import React from "react";
 
@@ -15,9 +15,7 @@ const Home = () => {
       className="relative flex justify-center items-center flex-col overflow-x-hidden mx-auto"
     >
       <div className="w-full">
-        <NoiseBackground mode="light" intensity={0.1}>
-          <div>test</div>
-        </NoiseBackground>
+        <Hero />
         {/* <Suspense fallback={<div>Loading...</div>}>
           <NoiseBackground mode="light" intensity={0.1}>
             <Hero />
