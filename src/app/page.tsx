@@ -3,7 +3,7 @@
 import About from "@/components/About";
 // import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-// import MyProject from "@/components/MyProject";
+import MyProject from "@/components/MyProject";
 import NoiseBackground from "@/components/NoiseBackground";
 // import { Suspense } from "react";
 import React from "react";
@@ -20,6 +20,9 @@ const Home = () => {
         </NoiseBackground>
         <NoiseBackground mode="dark" intensity={0.1}>
           <About />
+        </NoiseBackground>
+        <NoiseBackground mode="light" intensity={0.1}>
+          <MyProject />
         </NoiseBackground>
         {/* <Suspense fallback={<div>Loading...</div>}>
           <NoiseBackground mode="light" intensity={0.1}>
