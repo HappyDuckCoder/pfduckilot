@@ -2,7 +2,7 @@
 // import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 // import MyProject from "@/components/MyProject";
-import NoiseBackground from "@/components/NoiseBackground";
+// import NoiseBackground from "@/components/NoiseBackground";
 import React from "react";
 
 const Home = () => {
