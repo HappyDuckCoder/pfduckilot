@@ -20,7 +20,7 @@ const Hero = () => {
         <IntroHeader />
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20">
           <div className="flex flex-col items-center translate-x-10 -translate-y-16">
-            <Portrait />
+            <Portrait width={200} height={200} />
             <p className="text-gray-600 mt-4 font-bold">Duckilot</p>
           </div>
           <div className="text-center md:text-left flex-1 p-5 mx-2">

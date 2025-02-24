@@ -3,14 +3,14 @@
 import Image from "next/image";
 import React from "react";
 
-const Portrait = () => {
+const Portrait = ({ width, height }: { width: number; height: number }) => {
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-lg">
       <Image
         alt="Portrait duckilot"
         src="/public/cv.jpg"
-        width={200}
-        height={200}
+        width={width}
+        height={height}
         className="rounded-2xl w-full object-cover hover:scale-105 transition-transform"
         priority
       />
