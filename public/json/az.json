@@ -1,0 +1,56 @@
+{
+  "unit_1": {
+    "title": "Describe Azure App Service key components and value",
+    "objectives": [
+      "Describe Azure App Service key components and value.",
+      "Explain how Azure App Service manages authentication and authorization.",
+      "Identify methods to control inbound and outbound traffic to your web app.",
+      "Deploy an app to App Service using Azure CLI commands."
+    ]
+  },
+  "unit_2": {
+    "title": "Examine Azure App Service",
+    "content": {
+      "overview": "Cloud cho phép deploy server cho ứng dụng cá nhân hay các hệ thống backend. Có thể tích hợp trên cả Windows và Linux.",
+      "features": {
+        "scaling": "Khả năng scale up/ down linh hoạt, không phụ thuộc vào RAM máy tính, cho thêm khả năng lưu trữ tài nguyên.",
+        "packaging": "Đóng gói docker và chạy server trên cloud được hỗ trợ. Hỗ trợ nhiều phần mềm đóng gói chứ không chỉ docker.",
+        "cicd": "Azure cung cấp một hệ thống CICD hiện đại kết hợp với Git, Docker.",
+        "balancing": "Có thể chia nhiều server để deploy."
+      },
+      "limitations": {
+        "project_sharing": "Giới hạn về khả năng chia sẻ project.",
+        "storage_speed": "Giới hạn về tốc độ truy cập storage."
+      }
+    }
+  },
+  "unit_3": {
+    "title": "Examine Azure App Service plans",
+    "content": {
+      "app_service_plan": "Một app luôn có một App Service Plan - Là một bộ những phép tính toán tài nguyên để chạy app.",
+      "components": [
+        "Operating System (Windows, Linux)",
+        "Region (West US, East US, etc.)",
+        "Number of VM instances",
+        "Size of VM instances (Small, Medium, Large)",
+        "Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)"
+      ],
+      "scaling": "Phiên bản Free không hỗ trợ scale. Các phiên bản khác có thể mở rộng số lượng VM hoặc tự động theo nhu cầu.",
+      "optimization": "Tiết kiệm chi phí bằng cách gom nhiều ứng dụng vào cùng một App Service Plan. Nhưng nếu một ứng dụng dùng quá nhiều tài nguyên, nên tách riêng."
+    }
+  },
+  "unit_4": {
+    "title": "Deployment in Azure App Service",
+    "content": {
+      "automated_deployment": "Continuous Deployment giúp cập nhật tính năng mới và sửa lỗi nhanh chóng mà không ảnh hưởng đến người dùng.",
+      "manual_deployment": {
+        "git": "Azure cung cấp một Git URL để đẩy mã nguồn lên.",
+        "cli": "Lệnh az webapp up giúp đóng gói và triển khai ứng dụng.",
+        "zip_deploy": "Gửi file ZIP chứa mã nguồn bằng curl hoặc công cụ HTTP.",
+        "ftp": "Dùng giao thức FTP/FTPS để tải lên mã nguồn."
+      },
+      "deployment_slots": "Triển khai lên staging slot trước khi đưa vào production để tránh downtime.",
+      "container_deployment": "Azure hỗ trợ triển khai container từ Azure Container Registry hoặc registry khác."
+    }
+  }
+}

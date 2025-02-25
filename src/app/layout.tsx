@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import FloatingNavbar from "@/components/ui/FloatingNavbar";
 import Head from "next/head";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 export const dynamic = "force-dynamic";
 

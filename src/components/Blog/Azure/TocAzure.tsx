@@ -2,7 +2,7 @@
 
 import { HeaderContent } from "@/lib/AzureCourse";
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 
 const TocAzure = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -38,38 +38,50 @@ const TocAzure = () => {
     <>
       {/* Nút Toggle Sidebar */}
       <button
-        className="fixed top-5 left-10 bg-blue-500 text-white p-3 rounded-lg shadow-lg z-50 flex items-center gap-2"
+        className={`fixed top-5 left-5 hover:scale-110 text-lightColor z-50 transition-all duration-300 ${
+          isOpen ? "rotate-180" : "rotate-0"
+        }`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
-        {isOpen ? "Đóng" : "Mở"} TOC
       </button>
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-16 left-0 h-[80vh] w-72 bg-[#0a192f] text-white p-5 rounded-r-lg shadow-lg transition-all duration-500 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-80"
-        } lg:translate-x-0`}
+        className={`fixed top-12 left-0 h-screen w-80 bg-white border-2 border-gray-200 rounded-lg shadow-lg p-6 transition-all duration-500 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        <h2 className="text-xl font-bold mb-4 text-center text-blue-400">
-          📌 Table of Contents
-        </h2>
-        <ul className="space-y-3">
-          {HeaderContent.map((header, index) => (
-            <li key={index}>
-              <button
-                onClick={() => handleScrollToSection(index)}
-                className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                  activeIndex === index
-                    ? "bg-blue-500 text-white font-bold"
-                    : "hover:bg-gray-800 hover:text-blue-400"
-                }`}
-              >
-                {header}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="h-full flex flex-col">
+          {/* Header */}
+          <h2 className="text-2xl font-bold mb-6 text-center text-black">
+            📚 Table of Contents
+          </h2>
+
+          {/* Danh sách nội dung */}
+          <ul className="flex-1 pr-2 overflow-y-scroll mt-2 mb-10">
+            {HeaderContent.map((header, index) => (
+              <li key={index} className="mb-2">
+                <button
+                  onClick={() => handleScrollToSection(index)}
+                  className={`w-full flex items-center justify-between text-left px-4 py-3 rounded-lg transition-all duration-300 ${
+                    activeIndex === index
+                      ? "bg-darkColor text-white shadow-md"
+                      : "bg-gray-100 hover:bg-gray-200 text-black"
+                  }`}
+                >
+                  <span className="truncate">{header}</span>
+                  <ChevronRight
+                    size={18}
+                    className={`transition-transform ${
+                      activeIndex === index ? "rotate-90" : "rotate-0"
+                    }`}
+                  />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </aside>
     </>
   );
