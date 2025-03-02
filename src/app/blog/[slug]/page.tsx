@@ -4,13 +4,14 @@ import { useParams } from "next/navigation";
 import React from "react";
 import NoiseBackground from "@/components/NoiseBackground";
 import Azure from "@/components/Blog/Azure/Azure";
+import Perplexity from "@/components/Blog/Perplexity/Perplexity";
 // import Machine from "@/components/Blog/Machine/Machine";
 // import Prisma from "@/components/Blog/Prisma/Prisma";
 
 // Định nghĩa danh sách component tương ứng với từng slug
 const blogComponents: Record<string, React.FC> = {
   "1": Azure, // Nếu slug = "1", render component Azure
-  // "2": Machine, // Nếu slug = "2", render component Machine
+  "2": Perplexity, // Nếu slug = "2", render component Machine
   // "3": Prisma, // Nếu slug = "3", render component Prisma
 };
 

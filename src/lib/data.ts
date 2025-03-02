@@ -9,11 +9,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "2",
-    name: "Jane Smith",
-    title: "React Hooks: useState và useEffect",
-    description:
-      "Tìm hiểu cách sử dụng useState và useEffect để quản lý trạng thái trong React.",
-    image: "Image/p2.png",
+    name: "Perplexity AI",
+    title: "A new AI researcher for better insights",
+    description: "Những khám phá tốt nhất về Perplexity AI",
+    image: "blog/perplexity.png",
   },
   {
     id: "3",
