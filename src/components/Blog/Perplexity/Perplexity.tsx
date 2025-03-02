@@ -37,9 +37,9 @@ const Perplexity = () => {
               với một trí tuệ nhân tạo thông minh.
             </li>
             <li>
-              <strong>Chế độ "Deep Research"</strong>: Giúp tìm kiếm và phân
-              tích thông tin sâu hơn, dành nhiều thời gian để đưa ra kết quả chi
-              tiết.
+              <strong>Chế độ &quot;Deep Research&quot;</strong>: Giúp tìm kiếm
+              và phân tích thông tin sâu hơn, dành nhiều thời gian để đưa ra kết
+              quả chi tiết.
             </li>
             <li>
               <strong>Tích hợp nguồn dữ liệu phong phú</strong>: Perplexity AI
@@ -61,9 +61,9 @@ const Perplexity = () => {
               chính xác nhất, hãy sử dụng ngôn ngữ rõ ràng, tránh mô tả mơ hồ.
             </li>
             <li>
-              <strong>Tận dụng chế độ "Deep Research"</strong>: Khi cần tìm hiểu
-              vấn đề sâu hơn, hãy bật chế độ này để AI có thời gian tổng hợp
-              thông tin tốt nhất.
+              <strong>Tận dụng chế độ &quot;Deep Research&quot;</strong>: Khi
+              cần tìm hiểu vấn đề sâu hơn, hãy bật chế độ này để AI có thời gian
+              tổng hợp thông tin tốt nhất.
             </li>
             <li>
               <strong>Kiểm tra nguồn dữ liệu</strong>: Mỗi câu trả lời của
@@ -85,8 +85,8 @@ const Perplexity = () => {
               phần API trong cài đặt tài khoản.
             </li>
             <li>
-              <strong>Tạo khoá API</strong>: Nhấn "Generate API Key" để tạo khoá
-              API cá nhân.
+              <strong>Tạo khoá API</strong>: Nhấn &quot;Generate API Key&quot;
+              để tạo khoá API cá nhân.
             </li>
             <li>
               <strong>Tích hợp API vào ứng dụng</strong>: Dùng khoá API để tích
@@ -100,9 +100,9 @@ const Perplexity = () => {
           <p className="text-lg text-lightColor mb-6">
             Perplexity AI là một công cụ AI tiềm năng, giúp người dùng tìm kiếm
             và phân tích thông tin nhanh chóng, chính xác. Bằng việc tận dụng
-            các chức năng như "Deep Research", API Sonar và giao diện đàm thoại
-            thông minh, Perplexity AI đang dần trở thành một đối thủ đáng gờm
-            trên thị trường AI và công nghệ tìm kiếm.
+            các chức năng như &quot;Deep Research&quot;, API Sonar và giao diện
+            đàm thoại thông minh, Perplexity AI đang dần trở thành một đối thủ
+            đáng gờm trên thị trường AI và công nghệ tìm kiếm.
           </p>
         </div>
       </div>
