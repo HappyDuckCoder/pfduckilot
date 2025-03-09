@@ -5,6 +5,7 @@ import React from "react";
 import NoiseBackground from "@/components/NoiseBackground";
 import Azure from "@/components/Blog/Azure/Azure";
 import Perplexity from "@/components/Blog/Perplexity/Perplexity";
+import Perceptron from "@/components/Blog/Perception/Perception";
 // import Machine from "@/components/Blog/Machine/Machine";
 // import Prisma from "@/components/Blog/Prisma/Prisma";
 
@@ -12,7 +13,7 @@ import Perplexity from "@/components/Blog/Perplexity/Perplexity";
 const blogComponents: Record<string, React.FC> = {
   "1": Azure, // Nếu slug = "1", render component Azure
   "2": Perplexity, // Nếu slug = "2", render component Machine
-  // "3": Prisma, // Nếu slug = "3", render component Prisma
+  "3": Perceptron,
 };
 
 const SingleBlog = () => {
