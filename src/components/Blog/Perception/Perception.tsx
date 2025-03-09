@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import {
-  BookOpen,
   Brain,
   Calculator,
   ChevronDown,
-  ChevronRight,
   ChevronUp,
   Code2,
   Database,
@@ -232,21 +230,21 @@ const Perception = () => {
             trong quá trình huấn luyện. Điều này có nghĩa là, trong mỗi lần lặp
             huấn luyện, một số nơ-ron sẽ bị loại bỏ khỏi mạng một cách ngẫu
             nhiên, cùng với tất cả các kết nối đến và đi từ các nơ-ron đó. Tỷ lệ
-            nơ-ron bị loại bỏ được gọi là "tỷ lệ dropout" (dropout rate), thường
-            được đặt trong khoảng từ 0.2 đến 0.5. Tại sao Dropout lại hiệu quả?
-            Dropout hiệu quả vì nó giúp ngăn chặn các nơ-ron trong mạng trở nên
-            quá phụ thuộc vào nhau. Khi một nơ-ron bị loại bỏ, các nơ-ron khác
-            buộc phải học cách bù đắp cho sự thiếu hụt này. Điều này dẫn đến
-            việc các nơ-ron trở nên mạnh mẽ hơn và ít nhạy cảm hơn với các thay
-            đổi nhỏ trong dữ liệu đầu vào. Ngoài ra, Dropout còn có thể được xem
-            như là một phương pháp tạo ra nhiều mô hình con khác nhau. Mỗi khi
-            một tập hợp các nơ-ron khác nhau bị loại bỏ, ta sẽ có một mô hình
-            con khác nhau. Khi kết thúc quá trình huấn luyện, ta có thể xem như
-            là đã huấn luyện một tập hợp lớn các mô hình con, và kết quả dự đoán
-            cuối cùng là kết quả trung bình của tất cả các mô hình con này. Việc
-            lấy trung bình các mô hình con thường giúp cải thiện khả năng khái
-            quát hóa của mô hình. Ứng dụng thực tế của Dropout Dropout được sử
-            dụng rộng rãi trong nhiều ứng dụng khác nhau của mạng nơ-ron sâu,
+            nơ-ron bị loại bỏ được gọi là &quo;tỷ lệ dropout&quo; (dropout
+            rate), thường được đặt trong khoảng từ 0.2 đến 0.5. Tại sao Dropout
+            lại hiệu quả? Dropout hiệu quả vì nó giúp ngăn chặn các nơ-ron trong
+            mạng trở nên quá phụ thuộc vào nhau. Khi một nơ-ron bị loại bỏ, các
+            nơ-ron khác buộc phải học cách bù đắp cho sự thiếu hụt này. Điều này
+            dẫn đến việc các nơ-ron trở nên mạnh mẽ hơn và ít nhạy cảm hơn với
+            các thay đổi nhỏ trong dữ liệu đầu vào. Ngoài ra, Dropout còn có thể
+            được xem như là một phương pháp tạo ra nhiều mô hình con khác nhau.
+            Mỗi khi một tập hợp các nơ-ron khác nhau bị loại bỏ, ta sẽ có một mô
+            hình con khác nhau. Khi kết thúc quá trình huấn luyện, ta có thể xem
+            như là đã huấn luyện một tập hợp lớn các mô hình con, và kết quả dự
+            đoán cuối cùng là kết quả trung bình của tất cả các mô hình con này.
+            Việc lấy trung bình các mô hình con thường giúp cải thiện khả năng
+            khái quát hóa của mô hình. Ứng dụng thực tế của Dropout Dropout được
+            sử dụng rộng rãi trong nhiều ứng dụng khác nhau của mạng nơ-ron sâu,
             bao gồm: Thị giác máy tính: Dropout được sử dụng trong các mô hình
             phân loại ảnh, nhận diện đối tượng và phân đoạn ảnh. Xử lý ngôn ngữ
             tự nhiên: Dropout được sử dụng trong các mô hình dịch máy, phân tích
@@ -280,17 +278,18 @@ const Perception = () => {
             mạng nơ-ron. Tầng ẩn 1: Ảnh được xử lý qua các lớp convolution và
             pooling để trích xuất đặc trưng. Tầng ẩn 2: Các đặc trưng được xử lý
             qua các lớp fully connected để tạo ra các đặc trưng phức tạp hơn.
-            Tầng đầu ra: Dự đoán nhãn "mèo" hoặc "chó" dựa trên các đặc trưng đã
-            trích xuất. 2. Lan truyền ngược (Backpropagation) Tính mất mát: So
-            sánh dự đoán với nhãn thực tế và tính toán hàm mất mát (ví dụ:
-            cross-entropy). Tính gradient: Tính toán gradient của mất mát đối
-            với mỗi tham số trong mạng. Cập nhật tham số: Sử dụng gradient để
-            cập nhật các trọng số và hệ số điều chỉnh trong mạng. Ví dụ cụ thể:
-            Giả sử chúng ta có một mạng nơ-ron đơn giản với hai tầng ẩn: Tầng ẩn
-            1 (ReLU): Nhận ảnh đầu vào và trích xuất các đặc trưng cơ bản. Tầng
-            ẩn 2 (ReLU): Nhận đặc trưng từ tầng ẩn 1 và trích xuất các đặc trưng
-            phức tạp hơn. Tầng đầu ra (Softmax): Dự đoán nhãn "mèo" hoặc "chó".
-            Lan truyền xuôi: Ảnh đầu vào được xử lý qua tầng ẩn 1 để tạo ra đặc
+            Tầng đầu ra: Dự đoán nhãn &quot;mèo&quot; hoặc &quot;chó&quot; dựa
+            trên các đặc trưng đã trích xuất. 2. Lan truyền ngược
+            (Backpropagation) Tính mất mát: So sánh dự đoán với nhãn thực tế và
+            tính toán hàm mất mát (ví dụ: cross-entropy). Tính gradient: Tính
+            toán gradient của mất mát đối với mỗi tham số trong mạng. Cập nhật
+            tham số: Sử dụng gradient để cập nhật các trọng số và hệ số điều
+            chỉnh trong mạng. Ví dụ cụ thể: Giả sử chúng ta có một mạng nơ-ron
+            đơn giản với hai tầng ẩn: Tầng ẩn 1 (ReLU): Nhận ảnh đầu vào và
+            trích xuất các đặc trưng cơ bản. Tầng ẩn 2 (ReLU): Nhận đặc trưng từ
+            tầng ẩn 1 và trích xuất các đặc trưng phức tạp hơn. Tầng đầu ra
+            (Softmax): Dự đoán nhãn &quot;mèo&quot; hoặc &quot;chó&quot;. Lan
+            truyền xuôi: Ảnh đầu vào được xử lý qua tầng ẩn 1 để tạo ra đặc
             trưng cơ bản. Đặc trưng cơ bản được xử lý qua tầng ẩn 2 để tạo ra
             đặc trưng phức tạp hơn. Đặc trưng phức tạp được đưa vào tầng đầu ra
             để dự đoán nhãn. Lan truyền ngược: So sánh dự đoán với nhãn thực tế
@@ -413,79 +412,79 @@ const Perception = () => {
             dụ: Dự đoán kết quả chẩn đoán bệnh dựa trên các triệu chứng. Tỷ lệ
             mắc bệnh thay đổi theo thời gian hoặc địa điểm. Dịch chuyển khái
             niệm (Concept Shift): Định nghĩa của nhãn thay đổi. Ví dụ: Định
-            nghĩa của "đồ uống có ga" khác nhau ở các vùng khác nhau. 2. Hiệu
-            chỉnh phân phối (Distribution Alignment) 2.1. Hiệu chỉnh phân phối
-            là gì? Hiệu chỉnh phân phối là các kỹ thuật được sử dụng để giảm
-            thiểu tác động của dịch chuyển phân phối lên hiệu suất mô hình. 2.2.
-            Tại sao cần hiệu chỉnh phân phối? Cải thiện hiệu suất mô hình: Hiệu
-            chỉnh phân phối có thể giúp mô hình hoạt động tốt hơn trong các tình
-            huống mà phân phối dữ liệu thay đổi. Đảm bảo tính công bằng: Hiệu
-            chỉnh phân phối có thể giúp giảm thiểu sự thiên vị trong mô hình do
-            sự khác biệt trong phân phối dữ liệu. 2.3. Ví dụ thực tế Hiệu chỉnh
-            dịch chuyển hiệp biến: Sử dụng các kỹ thuật như tầm quan trọng mẫu
-            (sample weighting) để điều chỉnh trọng số của các mẫu huấn luyện sao
-            cho phù hợp với phân phối mục tiêu. Domain Adaptation: Huấn luyện mô
-            hình trên một miền (ví dụ: dữ liệu tổng hợp) và sau đó điều chỉnh mô
-            hình để hoạt động tốt trên một miền khác (ví dụ: dữ liệu thực tế).
-            2.4. Ví dụ học sinh Một học sinh huấn luyện một mô hình để nhận dạng
-            chữ viết tay bằng cách sử dụng dữ liệu từ một bộ dữ liệu tiêu chuẩn.
-            Tuy nhiên, khi học sinh thử nghiệm mô hình trên chữ viết tay của
-            chính mình, mô hình hoạt động kém do phong cách viết khác với dữ
-            liệu huấn luyện. Để cải thiện hiệu suất, học sinh có thể sử dụng các
-            kỹ thuật hiệu chỉnh phân phối như: Thu thập thêm dữ liệu: Thu thập
-            thêm dữ liệu chữ viết tay của chính mình và sử dụng nó để tinh chỉnh
-            mô hình. Tăng cường dữ liệu: Sử dụng các kỹ thuật tăng cường dữ liệu
-            để tạo ra các biến thể của dữ liệu huấn luyện hiện có, giúp mô hình
-            trở nên mạnh mẽ hơn trước sự thay đổi về phong cách viết. 3. Dịch
-            chuyển hiệp biến (Covariate Shift) 1.1. Hiệu chỉnh Dịch chuyển hiệp
-            biến xảy ra khi phân phối của đầu vào thay đổi, nhưng phân phối có
-            điều kiện của nhãn không đổi. Để hiệu chỉnh, bạn có thể sử dụng các
-            kỹ thuật như: Tầm quan trọng mẫu (Importance Weighting): Gán trọng
-            số cho các mẫu huấn luyện dựa trên sự khác biệt giữa phân phối huấn
-            luyện và phân phối kiểm tra. Huấn luyện lại mô hình: Sử dụng dữ liệu
-            mới đại diện cho phân phối kiểm tra để huấn luyện lại mô hình. 1.2.
-            Ví dụ Huấn luyện mô hình nhận dạng hình ảnh: Một mô hình được huấn
-            luyện trên ảnh chụp trong điều kiện ánh sáng ban ngày, nhưng khi
-            kiểm tra trên ảnh chụp vào ban đêm, hiệu suất giảm. Để hiệu chỉnh,
-            bạn có thể thu thập thêm ảnh chụp vào ban đêm và huấn luyện lại mô
-            hình. Phân loại văn bản: Một mô hình được huấn luyện để phân loại
-            văn bản trên dữ liệu từ các bài báo, nhưng khi áp dụng cho dữ liệu
-            từ mạng xã hội, mô hình hoạt động kém do sự khác biệt về ngôn ngữ và
-            ngữ pháp. Để hiệu chỉnh, bạn có thể sử dụng tầm quan trọng mẫu để
-            điều chỉnh trọng số của các mẫu huấn luyện dựa trên sự khác biệt về
-            phân phối dữ liệu. 4. Dịch chuyển nhãn (Label Shift) 2.1. Hiệu chỉnh
-            Dịch chuyển nhãn xảy ra khi phân phối của nhãn thay đổi, nhưng phân
-            phối có điều kiện của đầu vào không đổi. Để hiệu chỉnh, bạn có thể
-            sử dụng các kỹ thuật như: Huấn luyện lại mô hình với dữ liệu mới:
-            Thu thập dữ liệu mới phản ánh phân phối nhãn mới và huấn luyện lại
-            mô hình. Điều chỉnh trọng số nhãn: Gán trọng số cho các nhãn dựa
-            trên sự khác biệt giữa phân phối huấn luyện và phân phối kiểm tra.
-            2.2. Ví dụ Dự đoán kết quả bầu cử: Một mô hình được huấn luyện để dự
-            đoán kết quả bầu cử dựa trên dữ liệu từ một khu vực, nhưng khi áp
-            dụng cho một khu vực khác, mô hình hoạt động kém do sự khác biệt về
-            tỷ lệ cử tri. Để hiệu chỉnh, bạn có thể thu thập dữ liệu mới từ khu
-            vực mới và huấn luyện lại mô hình. Phân loại sản phẩm: Một mô hình
-            được huấn luyện để phân loại sản phẩm dựa trên dữ liệu từ một mùa,
-            nhưng khi áp dụng cho mùa khác, mô hình hoạt động kém do sự thay đổi
-            về nhu cầu sản phẩm. Để hiệu chỉnh, bạn có thể điều chỉnh trọng số
-            của các nhãn dựa trên sự khác biệt về phân phối sản phẩm giữa các
-            mùa. 5. Dịch chuyển khái niệm (Concept Shift) 3.1. Hiệu chỉnh Dịch
-            chuyển khái niệm xảy ra khi định nghĩa của nhãn thay đổi. Để hiệu
-            chỉnh, bạn cần: Cập nhật dữ liệu và nhãn: Thu thập dữ liệu mới với
-            định nghĩa nhãn mới và huấn luyện lại mô hình. Sử dụng học chuyển
-            giao (Transfer Learning): Sử dụng kiến thức từ mô hình đã huấn luyện
-            để nhanh chóng thích nghi với định nghĩa nhãn mới. 3.2. Ví dụ Phân
-            loại hình ảnh động vật: Một mô hình được huấn luyện để phân loại
-            hình ảnh động vật dựa trên dữ liệu cũ, nhưng sau đó định nghĩa về
-            một số loài động vật được thay đổi. Để hiệu chỉnh, bạn cần thu thập
-            dữ liệu mới với định nghĩa mới và huấn luyện lại mô hình. Phân loại
-            văn bản: Một mô hình được huấn luyện để phân loại văn bản dựa trên
-            dữ liệu cũ, nhưng sau đó cách phân loại được thay đổi (ví dụ: thêm
-            hoặc xóa các loại phân loại). Để hiệu chỉnh, bạn có thể sử dụng học
-            chuyển giao để nhanh chóng thích nghi với hệ thống phân loại mới.
-            Mỗi loại dịch chuyển phân phối đòi hỏi một cách tiếp cận hiệu chỉnh
-            riêng biệt để đảm bảo rằng mô hình hoạt động tốt trong các điều kiện
-            mới.
+            nghĩa của &quot;đồ uống có ga&quot; khác nhau ở các vùng khác nhau.
+            2. Hiệu chỉnh phân phối (Distribution Alignment) 2.1. Hiệu chỉnh
+            phân phối là gì? Hiệu chỉnh phân phối là các kỹ thuật được sử dụng
+            để giảm thiểu tác động của dịch chuyển phân phối lên hiệu suất mô
+            hình. 2.2. Tại sao cần hiệu chỉnh phân phối? Cải thiện hiệu suất mô
+            hình: Hiệu chỉnh phân phối có thể giúp mô hình hoạt động tốt hơn
+            trong các tình huống mà phân phối dữ liệu thay đổi. Đảm bảo tính
+            công bằng: Hiệu chỉnh phân phối có thể giúp giảm thiểu sự thiên vị
+            trong mô hình do sự khác biệt trong phân phối dữ liệu. 2.3. Ví dụ
+            thực tế Hiệu chỉnh dịch chuyển hiệp biến: Sử dụng các kỹ thuật như
+            tầm quan trọng mẫu (sample weighting) để điều chỉnh trọng số của các
+            mẫu huấn luyện sao cho phù hợp với phân phối mục tiêu. Domain
+            Adaptation: Huấn luyện mô hình trên một miền (ví dụ: dữ liệu tổng
+            hợp) và sau đó điều chỉnh mô hình để hoạt động tốt trên một miền
+            khác (ví dụ: dữ liệu thực tế). 2.4. Ví dụ học sinh Một học sinh huấn
+            luyện một mô hình để nhận dạng chữ viết tay bằng cách sử dụng dữ
+            liệu từ một bộ dữ liệu tiêu chuẩn. Tuy nhiên, khi học sinh thử
+            nghiệm mô hình trên chữ viết tay của chính mình, mô hình hoạt động
+            kém do phong cách viết khác với dữ liệu huấn luyện. Để cải thiện
+            hiệu suất, học sinh có thể sử dụng các kỹ thuật hiệu chỉnh phân phối
+            như: Thu thập thêm dữ liệu: Thu thập thêm dữ liệu chữ viết tay của
+            chính mình và sử dụng nó để tinh chỉnh mô hình. Tăng cường dữ liệu:
+            Sử dụng các kỹ thuật tăng cường dữ liệu để tạo ra các biến thể của
+            dữ liệu huấn luyện hiện có, giúp mô hình trở nên mạnh mẽ hơn trước
+            sự thay đổi về phong cách viết. 3. Dịch chuyển hiệp biến (Covariate
+            Shift) 1.1. Hiệu chỉnh Dịch chuyển hiệp biến xảy ra khi phân phối
+            của đầu vào thay đổi, nhưng phân phối có điều kiện của nhãn không
+            đổi. Để hiệu chỉnh, bạn có thể sử dụng các kỹ thuật như: Tầm quan
+            trọng mẫu (Importance Weighting): Gán trọng số cho các mẫu huấn
+            luyện dựa trên sự khác biệt giữa phân phối huấn luyện và phân phối
+            kiểm tra. Huấn luyện lại mô hình: Sử dụng dữ liệu mới đại diện cho
+            phân phối kiểm tra để huấn luyện lại mô hình. 1.2. Ví dụ Huấn luyện
+            mô hình nhận dạng hình ảnh: Một mô hình được huấn luyện trên ảnh
+            chụp trong điều kiện ánh sáng ban ngày, nhưng khi kiểm tra trên ảnh
+            chụp vào ban đêm, hiệu suất giảm. Để hiệu chỉnh, bạn có thể thu thập
+            thêm ảnh chụp vào ban đêm và huấn luyện lại mô hình. Phân loại văn
+            bản: Một mô hình được huấn luyện để phân loại văn bản trên dữ liệu
+            từ các bài báo, nhưng khi áp dụng cho dữ liệu từ mạng xã hội, mô
+            hình hoạt động kém do sự khác biệt về ngôn ngữ và ngữ pháp. Để hiệu
+            chỉnh, bạn có thể sử dụng tầm quan trọng mẫu để điều chỉnh trọng số
+            của các mẫu huấn luyện dựa trên sự khác biệt về phân phối dữ liệu.
+            4. Dịch chuyển nhãn (Label Shift) 2.1. Hiệu chỉnh Dịch chuyển nhãn
+            xảy ra khi phân phối của nhãn thay đổi, nhưng phân phối có điều kiện
+            của đầu vào không đổi. Để hiệu chỉnh, bạn có thể sử dụng các kỹ
+            thuật như: Huấn luyện lại mô hình với dữ liệu mới: Thu thập dữ liệu
+            mới phản ánh phân phối nhãn mới và huấn luyện lại mô hình. Điều
+            chỉnh trọng số nhãn: Gán trọng số cho các nhãn dựa trên sự khác biệt
+            giữa phân phối huấn luyện và phân phối kiểm tra. 2.2. Ví dụ Dự đoán
+            kết quả bầu cử: Một mô hình được huấn luyện để dự đoán kết quả bầu
+            cử dựa trên dữ liệu từ một khu vực, nhưng khi áp dụng cho một khu
+            vực khác, mô hình hoạt động kém do sự khác biệt về tỷ lệ cử tri. Để
+            hiệu chỉnh, bạn có thể thu thập dữ liệu mới từ khu vực mới và huấn
+            luyện lại mô hình. Phân loại sản phẩm: Một mô hình được huấn luyện
+            để phân loại sản phẩm dựa trên dữ liệu từ một mùa, nhưng khi áp dụng
+            cho mùa khác, mô hình hoạt động kém do sự thay đổi về nhu cầu sản
+            phẩm. Để hiệu chỉnh, bạn có thể điều chỉnh trọng số của các nhãn dựa
+            trên sự khác biệt về phân phối sản phẩm giữa các mùa. 5. Dịch chuyển
+            khái niệm (Concept Shift) 3.1. Hiệu chỉnh Dịch chuyển khái niệm xảy
+            ra khi định nghĩa của nhãn thay đổi. Để hiệu chỉnh, bạn cần: Cập
+            nhật dữ liệu và nhãn: Thu thập dữ liệu mới với định nghĩa nhãn mới
+            và huấn luyện lại mô hình. Sử dụng học chuyển giao (Transfer
+            Learning): Sử dụng kiến thức từ mô hình đã huấn luyện để nhanh chóng
+            thích nghi với định nghĩa nhãn mới. 3.2. Ví dụ Phân loại hình ảnh
+            động vật: Một mô hình được huấn luyện để phân loại hình ảnh động vật
+            dựa trên dữ liệu cũ, nhưng sau đó định nghĩa về một số loài động vật
+            được thay đổi. Để hiệu chỉnh, bạn cần thu thập dữ liệu mới với định
+            nghĩa mới và huấn luyện lại mô hình. Phân loại văn bản: Một mô hình
+            được huấn luyện để phân loại văn bản dựa trên dữ liệu cũ, nhưng sau
+            đó cách phân loại được thay đổi (ví dụ: thêm hoặc xóa các loại phân
+            loại). Để hiệu chỉnh, bạn có thể sử dụng học chuyển giao để nhanh
+            chóng thích nghi với hệ thống phân loại mới. Mỗi loại dịch chuyển
+            phân phối đòi hỏi một cách tiếp cận hiệu chỉnh riêng biệt để đảm bảo
+            rằng mô hình hoạt động tốt trong các điều kiện mới.
           </p>
         </>
       ),
@@ -500,7 +499,7 @@ const Perception = () => {
           {/* Introduction */}
           <div className="prose max-w-none">
             <p className="text-gray-600">
-              In this blog, we'll discuss deep learning concepts from{" "}
+              In this blog, we&apos;ll discuss deep learning concepts from{" "}
               <a
                 href="https://d2l.aivivn.com/chapter_multilayer-perceptrons/index_vn.html"
                 className="text-indigo-600 hover:text-indigo-800"
