@@ -16,11 +16,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "3",
-    name: "David Lee",
-    title: "Làm chủ CSS Flexbox",
-    description:
-      "Flexbox giúp bố cục trang web linh hoạt hơn. Hãy cùng khám phá các thuộc tính quan trọng!",
-    image: "Image/p2.png",
+    name: "Deep Learning D2L",
+    title: "Perception in Deep Learning",
+    description: "Những khái niệm về perception trong deep learning",
+    image: "blog/perception.png",
   },
   {
     id: "4",
