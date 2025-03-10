@@ -23,11 +23,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "4",
-    name: "Emily Brown",
-    title: "Next.js 15: Những tính năng mới",
-    description:
-      "Next.js 15 mang đến những cải tiến về hiệu suất, routing và server actions.",
-    image: "Image/p2.png",
+    name: "Deep Learning D2L",
+    title: "Deep Learning calculation",
+    description: "Những khái niệm tính toán trong deep learning",
+    image: "blog/calculation.png",
   },
   {
     id: "5",
