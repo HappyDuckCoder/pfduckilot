@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Brain, ChevronDown, ChevronUp } from "lucide-react";
+import { Brain, Calculator, ChevronDown, ChevronUp } from "lucide-react";
+import ContentCal from "./ContentCal";
 
 const Calculation = () => {
   const [expandedSection, setExpandedSection] = useState<number | null>(null);
@@ -89,6 +90,78 @@ const Calculation = () => {
             <br></br>
             Khối Tùy chỉnh: Khối do bạn tự định nghĩa, linh hoạt và phức tạp
             hơn. <br></br>
+          </p>
+        </>
+      ),
+    },
+    {
+      icon: Calculator,
+      title: "Quản lý tham số",
+      description: "Hiểu các khải niệm tham số cơ bản nhất",
+      content: (
+        <>
+          <ContentCal
+            title="Tham số mục tiêu"
+            descriptionL1="Định nghĩa: Tham số mục tiêu là các tham số cụ thể mà chúng ta muốn truy cập hoặc thao tác trực tiếp. Chúng thường là trọng số (weights) và độ lệch (biases) của một lớp cụ thể trong mạng nơ-ron."
+            descriptionL2="Ví dụ: Trong một mạng nơ-ron để dự đoán điểm thi của học sinh, tham số mục tiêu có thể là trọng số kết nối giữa lớp đầu vào (ví dụ: thời gian học, điểm trung bình) và lớp ẩn đầu tiên."
+          />
+          <ContentCal
+            title="Tham số cùng lúc"
+            descriptionL1="Định nghĩa: Tham số cùng lúc là tất cả các tham số trong mô hình, được truy cập và thao tác cùng một lúc. Điều này hữu ích khi thực hiện các phép toán trên toàn bộ mô hình, chẳng hạn như cập nhật trọng số trong quá trình huấn luyện."
+            descriptionL2="Ví dụ: Khi huấn luyện mô hình dự đoán điểm thi, chúng ta có thể muốn áp dụng một thuật toán tối ưu hóa (ví dụ: gradient descent) để cập nhật tất cả trọng số và độ lệch trong mạng cùng một lúc."
+          />
+          <ContentCal
+            title="Tham số ràng buộc"
+            descriptionL1="Định nghĩa: Tham số ràng buộc là các tham số được chia sẻ giữa các phần khác nhau của mô hình. Điều này thường được sử dụng trong các kiến trúc như mạng nơ-ron tích chập (CNN) hoặc mạng nơ-ron hồi quy (RNN), nơi các bộ lọc hoặc trọng số được sử dụng lại trên các phần khác nhau của dữ liệu đầu vào."
+            descriptionL2="Ví dụ: Trong một mô hình dự đoán điểm thi dựa trên nhiều bài kiểm tra khác nhau, chúng ta có thể sử dụng tham số ràng buộc để chia sẻ thông tin giữa các bài kiểm tra, giúp mô hình học được các đặc trưng chung quan trọng."
+          />
+          <ContentCal
+            title="Khởi tạo có sẵn"
+            descriptionL1="Định nghĩa: Khởi tạo có sẵn là việc sử dụng các phương pháp khởi tạo tham số đã được định nghĩa trước, chẳng hạn như khởi tạo ngẫu nhiên theo phân phối chuẩn (Normal distribution) hoặc phân phối đều (Uniform distribution)."
+            descriptionL2="Ví dụ: Khi xây dựng mô hình dự đoán điểm thi, chúng ta có thể sử dụng khởi tạo ngẫu nhiên theo phân phối chuẩn để gán các giá trị ban đầu cho trọng số của mạng."
+          />
+          <ContentCal
+            title="Quản lý tùy chỉnh"
+            descriptionL1="Định nghĩa: Khởi tạo tùy chỉnh là việc tự định nghĩa phương pháp khởi tạo tham số, thay vì sử dụng các phương pháp có sẵn. Điều này cho phép chúng ta kiểm soát tốt hơn các giá trị ban đầu của tham số, có thể giúp mô hình hội tụ nhanh hơn hoặc đạt được hiệu suất tốt hơn."
+            descriptionL2="Ví dụ: Thay vì sử dụng khởi tạo ngẫu nhiên, chúng ta có thể khởi tạo trọng số của mạng dự đoán điểm thi bằng cách sử dụng thông tin từ các mô hình đã được huấn luyện trước đó trên các bộ dữ liệu tương tự."
+          />
+          <h4 className="font-semibold mb-3">
+            Hai Ví Dụ Thực Tế Về Học Sinh Đi Thi
+          </h4>
+          <p className="mb-4">
+            <ul className="list-disc list-outside">
+              <strong>Ví Dụ 1:</strong> Dự Đoán Điểm Thi Cuối Kỳ Một trường học
+              muốn xây dựng một mô hình để dự đoán điểm thi cuối kỳ của học sinh
+              dựa trên các yếu tố như điểm trung bình, thời gian học, và số lần
+              tham gia các hoạt động ngoại khóa.
+              <li>
+                Tham số mục tiêu: Trọng số kết nối giữa thời gian học và lớp ẩn
+                đầu tiên.
+              </li>
+              <li>
+                Tham số cùng lúc: Tất cả trọng số và độ lệch trong mạng được cập
+                nhật đồng thời trong quá trình huấn luyện.
+              </li>
+              <li>
+                Khởi tạo có sẵn: Sử dụng khởi tạo ngẫu nhiên theo phân phối
+                chuẩn cho trọng số.
+              </li>
+            </ul>
+            <ul className="list-disc list-outide">
+              <strong>Ví Dụ 2:</strong>Đánh Giá Năng Lực Học Tập Dựa Trên Nhiều
+              Bài Kiểm Tra Một trung tâm giáo dục muốn đánh giá năng lực học tập
+              của học sinh dựa trên kết quả của nhiều bài kiểm tra khác nhau,
+              như Toán, Văn, Anh.
+              <li>
+                Tham số ràng buộc: Chia sẻ trọng số giữa các lớp xử lý thông tin
+                từ các bài kiểm tra khác nhau để học các đặc trưng chung. Khởi
+              </li>
+              <li>
+                tạo tùy chỉnh: Sử dụng thông tin từ các mô hình đã được huấn
+                luyện trước đó trên các bộ dữ liệu tương tự để khởi tạo trọng
+                số, giúp mô hình hội tụ nhanh hơn.
+              </li>
+            </ul>
           </p>
         </>
       ),
