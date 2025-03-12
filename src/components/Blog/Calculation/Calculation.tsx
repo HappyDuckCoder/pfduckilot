@@ -4,7 +4,6 @@ import {
   Calculator,
   ChevronDown,
   ChevronUp,
-  Code,
   Database,
 } from "lucide-react";
 import ContentCal from "./ContentCal";
