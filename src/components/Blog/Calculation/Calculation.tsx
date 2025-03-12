@@ -4,9 +4,13 @@ import {
   Calculator,
   ChevronDown,
   ChevronUp,
+  Code,
   Database,
 } from "lucide-react";
 import ContentCal from "./ContentCal";
+import { CodeDummy, CodeDummy2 } from "./dummyCodeCal";
+import CodeBlockCal from "./CalBlog";
+import ExampleCal from "./ExampleCal";
 
 const Calculation = () => {
   const [expandedSection, setExpandedSection] = useState<number | null>(null);
@@ -176,8 +180,77 @@ const Calculation = () => {
     {
       icon: Database,
       title: "Khởi tạo trễ",
-      description: "Các cách khởi tạo",
-      content: <p className="mb-4"></p>,
+      description: "Các cách khởi tạo tham số",
+      content: (
+        <>
+          <h4 className="font-semibold mb-3">Khởi tạo mảng</h4>
+          <div>
+            <strong>Định nghĩa:</strong> Khởi tạo mảng (array initialization) là
+            quá trình gán giá trị ban đầu cho các phần tử của một mảng khi mảng
+            đó được tạo.
+            <ContentCal
+              title="Ý nghĩa"
+              listDescription={[
+                "Thiết lập trạng thái ban đầu: Đảm bảo rằng mảng không chứa các giá trị rác hoặc không xác định, giúp tránh các lỗi không mong muốn trong quá trình tính toán.",
+                "Tăng tính dễ đọc và bảo trì: Giúp người đọc hiểu rõ mục đích sử dụng của mảng và các giá trị dự kiến của nó.",
+                "Tối ưu hóa hiệu suất: Trong một số trường hợp, việc khởi tạo mảng có thể giúp trình biên dịch hoặc trình thông dịch tối ưu hóa việc sử dụng bộ nhớ.",
+              ]}
+            />
+          </div>
+          <h4 className="font-semibold mb-3">Khởi tạo trễ</h4>
+          <div>
+            <strong>Định nghĩa:</strong> Khởi tạo trễ là một kỹ thuật trong đó
+            việc khởi tạo các tham số của một mô hình (ví dụ: mạng nơ-ron) được
+            trì hoãn cho đến khi kích thước của các tham số đó được xác định.
+            Điều này thường xảy ra khi kích thước của đầu vào hoặc các yếu tố
+            khác ảnh hưởng đến kích thước của các tham số.
+            <ContentCal
+              title="Ý nghĩa"
+              listDescription={[
+                "Linh hoạt: Cho phép định nghĩa kiến trúc mạng mà không cần biết trước kích thước đầu vào.",
+                "Thuận tiện: Loại bỏ sự cần thiết phải tính toán và chỉ định kích thước tham số một cách thủ công.",
+                "Tránh lỗi: Giảm thiểu khả năng xảy ra lỗi do không khớp kích thước giữa các tầng của mạng.",
+              ]}
+            />
+          </div>
+          <CodeBlockCal codeData={CodeDummy} />
+          <div className="mt-5 mb-5 flex flex-col justify-center items-center gap-2">
+            <ExampleCal
+              title="Ví dụ Thực Tế"
+              description="Trong một hệ thống nhận dạng giọng nói, kích thước của dữ liệu đầu vào (ví dụ: số lượng đặc trưng âm thanh) có thể khác nhau tùy thuộc vào độ dài của câu nói. Khởi tạo trễ cho phép mô hình xử lý các câu nói có độ dài khác nhau mà không cần phải định nghĩa trước kích thước tham số."
+            />
+            <ExampleCal
+              title="Ví dụ Liên Quan Đến Học Sinh Đi Thi"
+              description="Một ứng dụng chấm điểm bài luận có thể sử dụng khởi tạo trễ. Kích thước của dữ liệu đầu vào (văn bản bài luận) có thể khác nhau tùy thuộc vào độ dài của bài luận. Khởi tạo trễ cho phép mô hình xử lý các bài luận có độ dài khác nhau mà không cần phải giới hạn số lượng từ."
+            />
+          </div>
+          <h4 className="font-semibold mb-3">Khởi tạo cưỡng chế</h4>
+          <div>
+            <strong>Định nghĩa:</strong> Khởi tạo cưỡng chế là việc ép buộc khởi
+            tạo lại các tham số của một mô hình, ngay cả khi các tham số đó đã
+            được khởi tạo trước đó.
+            <ContentCal
+              title="Ý nghĩa"
+              listDescription={[
+                "Đặt lại mô hình: Cho phép bắt đầu lại quá trình huấn luyện mô hình với các giá trị tham số mới.",
+                "Thử nghiệm: Tạo điều kiện để thử nghiệm với các phương pháp khởi tạo khác nhau.",
+                "Khắc phục lỗi: Trong một số trường hợp, khởi tạo cưỡng chế có thể giúp khắc phục các lỗi hoặc vấn đề phát sinh trong quá trình huấn luyện.",
+              ]}
+            />
+          </div>
+          <CodeBlockCal codeData={CodeDummy2} />
+          <div className="mt-5 mb-5 flex flex-col justify-center items-center gap-2">
+            <ExampleCal
+              title="Ví dụ Thực Tế"
+              description="Trong quá trình huấn luyện một mô hình dự đoán giá cổ phiếu, bạn có thể muốn khởi tạo lại mô hình với các tham số ngẫu nhiên khác nhau để xem liệu điều này có cải thiện hiệu suất hay không."
+            />
+            <ExampleCal
+              title="Ví dụ Liên Quan Đến Học Sinh Đi Thi"
+              description='Sau khi hoàn thành một bài kiểm tra thử, một học sinh có thể muốn "khởi tạo lại" kiến thức của mình bằng cách xem lại các khái niệm cơ bản và làm lại các bài tập để chuẩn bị tốt hơn cho kỳ thi thật. Trong trường hợp này, việc "khởi tạo lại" kiến thức tương tự như việc khởi tạo cưỡng chế trong mô hình học máy.'
+            />
+          </div>
+        </>
+      ),
     },
   ];
 
