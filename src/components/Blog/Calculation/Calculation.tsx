@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Activity,
   Brain,
   Calculator,
   ChevronDown,
@@ -248,6 +249,87 @@ const Calculation = () => {
               description='Sau khi hoàn thành một bài kiểm tra thử, một học sinh có thể muốn "khởi tạo lại" kiến thức của mình bằng cách xem lại các khái niệm cơ bản và làm lại các bài tập để chuẩn bị tốt hơn cho kỳ thi thật. Trong trường hợp này, việc "khởi tạo lại" kiến thức tương tự như việc khởi tạo cưỡng chế trong mô hình học máy.'
             />
           </div>
+        </>
+      ),
+    },
+    {
+      icon: Activity,
+      title: "Các tầng tùy chính",
+      description: "Hiểu về tầng có tham số và tầng không có tham số",
+      content: (
+        <>
+          <h4 className="font-semibold mb-3">Các tầng không có tham số</h4>
+          {[
+            {
+              title: "Định nghĩa: ",
+              content: [
+                "Là các lớp mạng không chứa tham số có thể huấn luyện. Chúng thực hiện các phép toán cố định trên dữ liệu đầu vào.",
+              ],
+            },
+            {
+              title: "Ví dụ: ",
+              content: [
+                "Tầng Normalization: Chuẩn hóa dữ liệu để giảm sự chênh lệch về đơn vị đo.",
+                "Tầng Activation ReLU: Áp dụng hàm kích hoạt ReLU để giới hạn giá trị đầu ra.",
+              ],
+            },
+            {
+              title: "Ứng dụng thực tế: ",
+              content: [
+                "Chuẩn hóa dữ liệu hình ảnh trước khi đưa vào mạng.",
+                "Sử dụng ReLU để giới hạn đầu ra của một số lớp.",
+              ],
+            },
+            {
+              title: "Ví dụ liên quan đến học sinh đi thi: ",
+              content: [
+                "Tự động chuyển điểm từ thang 150 về thang 10 để dễ so sánh.",
+              ],
+            },
+          ].map((item, index) => (
+            <ContentCal
+              key={index}
+              title={item.title}
+              listDescription={item.content}
+              titleClassName={"text-slate-900 font-bold"}
+            />
+          ))}
+          <h4 className="font-semibold mb-3">Các tầng có tham số</h4>
+          {[
+            {
+              title: "Định nghĩa: ",
+              content: [
+                "Là các lớp mạng chứa tham số có thể huấn luyện. Chúng học cách trích xuất đặc trưng từ dữ liệu.",
+              ],
+            },
+            {
+              title: "Ví dụ: ",
+              content: [
+                "Tầng Dense (Fully Connected): Kết nối tất cả các nơ-ron của lớp trước với lớp sau.",
+                "Tầng Conv2D: Phát hiện đặc trưng hình ảnh thông qua các bộ lọc.",
+              ],
+            },
+            {
+              title: "Ứng dụng thực tế: ",
+              content: [
+                "Sử dụng Dense để phân loại dữ liệu.",
+                "Sử dụng Conv2D để nhận dạng hình ảnh.",
+              ],
+            },
+            {
+              title: "Ví dụ liên quan đến học sinh đi thi: ",
+              content: [
+                "Dự đoán điểm thi dựa trên lịch sử học tập bằng cách điều chỉnh trọng số cho từng môn học.",
+              ],
+            },
+          ].map((item, index) => (
+            <ContentCal
+              key={index}
+              title={item.title}
+              listDescription={item.content}
+              titleClassName={"text-slate-900 font-bold"}
+            />
+          ))}
         </>
       ),
     },
