@@ -26,11 +26,11 @@ const Contact = () => {
           {/* Tiêu đề */}
           <SplitText
             text="Great things can happen"
-            className="text-5xl md:text-6xl font-extrabold"
+            className="text-4xl md:text-6xl font-extrabold"
           />
           <SplitText
             text='with a simple "Hello"'
-            className="text-5xl md:text-6xl font-extrabold"
+            className="text-4xl md:text-6xl font-extrabold"
           />
         </div>
         <p className="text-gray-400 text-center text-xl mt-4">

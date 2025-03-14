@@ -47,15 +47,22 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="fixed top-5 right-5 z-50 flex items-center gap-3 px-4 py-2 bg-zinc-700/90 rounded-full shadow-lg"
         >
-          <motion.div
-            animate={{ x: [0, 5, 0] }}
-            transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
-          >
-            <FaArrowRight className="text-gray-200 text-lg" />
-          </motion.div>
+          <Link href="/blog" aria-label="View My Blog">
+            <motion.div
+              animate={{ x: [0, 5, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+            >
+              <FaArrowRight className="text-gray-200 text-lg" />
+            </motion.div>
+          </Link>
+
           <Link
             href="/blog"
-            className="text-gray-200 text-lg font-medium hover:underline"
+            className="text-gray-200 text-lg font-medium hover:underline hidden sm:block"
           >
             View My Blog
           </Link>
