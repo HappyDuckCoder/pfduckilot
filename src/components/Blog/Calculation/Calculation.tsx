@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Activity,
+  Album,
   Brain,
   Calculator,
   ChevronDown,
@@ -8,7 +9,17 @@ import {
   Database,
 } from "lucide-react";
 import ContentCal from "./ContentCal";
-import { CodeDummy, CodeDummy2 } from "./dummyCodeCal";
+import {
+  CodeDummy,
+  CodeDummy2,
+  DocGhi1,
+  DocGhi2,
+  DocGhi3,
+  DocGhi4,
+  DocGhiSec1,
+  DocGhiSec2,
+  DocGhiSec3,
+} from "./dummyCodeCal";
 import CodeBlockCal from "./CalBlog";
 import ExampleCal from "./ExampleCal";
 
@@ -330,6 +341,71 @@ const Calculation = () => {
               titleClassName={"text-slate-900 font-bold"}
             />
           ))}
+        </>
+      ),
+    },
+    {
+      icon: Album,
+      title: "Đọc và ghi tệp",
+      description: "Hiểu về cách đọc và ghi tệp",
+      content: (
+        <>
+          <h4 className="font-semibold mb-3">Đọc và ghi tệp</h4>
+          {[
+            {
+              title: "Lưu một ndarray duy nhất: ",
+              data: DocGhi1,
+            },
+            {
+              title: "Đọc một ndarray đã lưu: ",
+              data: DocGhi2,
+            },
+            {
+              title: "Lưu nhiều ndarray: ",
+              data: DocGhi3,
+            },
+            {
+              title: "Lưu và đọc một dictionary của các ndarray: ",
+              data: DocGhi4,
+            },
+          ].map((item, index) => (
+            <div key={index}>
+              <h5 className="mb-3">
+                {index + 1}. {item.title}
+              </h5>
+              <CodeBlockCal codeData={item.data} />
+            </div>
+          ))}
+          <h4 className="font-semibold mb-3">Tham số mô hình Gluon</h4>
+          {[
+            {
+              title: "Lưu một ndarray duy nhất: ",
+              data: DocGhiSec1,
+            },
+            {
+              title: "Đọc một ndarray đã lưu: ",
+              data: DocGhiSec2,
+            },
+            {
+              title: "Lưu nhiều ndarray: ",
+              data: DocGhiSec3,
+            },
+          ].map((item, index) => (
+            <div key={index}>
+              <h5 className="mb-3">
+                {index + 1}. {item.title}
+              </h5>
+              <CodeBlockCal codeData={item.data} />
+            </div>
+          ))}
+          <ContentCal
+            title="Tóm tắt: "
+            listDescription={[
+              "Sử dụng save và load cho các đối tượng ndarray.",
+              "Sử dụng save_parameters và load_parameters để lưu/load toàn bộ tham số của một mạng Gluon.",
+              "Lưu ý: Kiến trúc model cần được định nghĩa trong code, không được lưu trong file tham số.",
+            ]}
+          />
         </>
       ),
     },
