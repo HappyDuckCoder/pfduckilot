@@ -30,11 +30,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "5",
-    name: "Michael Johnson",
-    title: "MongoDB với Prisma",
-    description:
-      "Hướng dẫn tích hợp Prisma với MongoDB để quản lý dữ liệu hiệu quả.",
-    image: "Image/p2.png",
+    name: "LlamaIndex",
+    title: "Tìm hiểu framework LlamaIndex",
+    description: "Quá trình huấn luyện 1 chatbot AI của duckilot",
+    image: "blog/LlamaIndex.png",
   },
   {
     id: "6",

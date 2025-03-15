@@ -5,6 +5,11 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import React from "react";
 
+export const metadata = {
+  title: "Duckilot Blog",
+  description: "Duckilot Blog",
+};
+
 const page = () => {
   return (
     <main

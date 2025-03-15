@@ -7,15 +7,16 @@ import Azure from "@/components/Blog/Azure/Azure";
 import Perplexity from "@/components/Blog/Perplexity/Perplexity";
 import Perceptron from "@/components/Blog/Perception/Perception";
 import Calculation from "@/components/Blog/Calculation/Calculation";
-// import Machine from "@/components/Blog/Machine/Machine";
-// import Prisma from "@/components/Blog/Prisma/Prisma";
+import LlamaIndex from "@/components/Blog/LlamaIndex/LlamaIndex";
+// import { metadataBlog } from "@/lib/metadata";
 
 // Định nghĩa danh sách component tương ứng với từng slug
 const blogComponents: Record<string, React.FC> = {
-  "1": Azure, // Nếu slug = "1", render component Azure
-  "2": Perplexity, // Nếu slug = "2", render component Machine
+  "1": Azure,
+  "2": Perplexity,
   "3": Perceptron,
   "4": Calculation,
+  "5": LlamaIndex,
 };
 
 const SingleBlog = () => {

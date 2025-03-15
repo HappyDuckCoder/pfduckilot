@@ -6,8 +6,8 @@ import FloatingNavbar from "@/components/ui/FloatingNavbar";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Duck",
-  description: "",
+  title: "Duckilot",
+  description: "Duckilot Portfolio and Blog",
 };
 
 export default function RootLayout({
@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Duckilot</title>
         <link rel="icon" href="/public/icons/coffee.svg" />
       </head>
       <body className="overflow-x-hidden font-sans">
