@@ -3,7 +3,7 @@ import React from "react";
 const IntroLLI = () => {
   return (
     <div className="p-6 text-black bg-lightColor flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6 text-black">LlamaCloud</h1>
+      <h1 className="text-3xl font-bold text-black">LlamaCloud</h1>
       <div className="w-full p-6 bg-lightColor">
         <h2 className="text-2xl font-semibold mb-4 text-black">LlamaCloud</h2>
         <p className="text-black mb-4">

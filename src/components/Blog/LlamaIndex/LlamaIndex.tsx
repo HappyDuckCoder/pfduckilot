@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import IntroLLI from "./IntroLLI";
+import IndexingAndSearch from "./IndexingAndSearch";
 
 const sections = [
   {
@@ -16,10 +17,7 @@ const sections = [
     title: "Indexing & Search",
     content: (
       <>
-        <p>
-          Quá trình indexing giúp tổ chức dữ liệu thành các cấu trúc dễ dàng
-          truy vấn thông qua các thuật toán tìm kiếm hiệu quả.
-        </p>
+        <IndexingAndSearch />
       </>
     ),
   },
