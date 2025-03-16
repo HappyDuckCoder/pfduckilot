@@ -12,7 +12,7 @@ const IndexingAndSearch = () => {
   const [hoveredItem, setHoveredItem] = useState("default");
   const [displayedImage, setDisplayedImage] = useState(images.default);
 
-  // Giữ ảnh trước đó để không bị nhấp nháy khi hover
+  // Giữ ảnh trước đó để tránh nhấp nháy khi hover
   useEffect(() => {
     if (hoveredItem) {
       setDisplayedImage(images[hoveredItem as keyof typeof images]);
@@ -20,9 +20,9 @@ const IndexingAndSearch = () => {
   }, [hoveredItem]);
 
   return (
-    <div className="p-8 text-black flex flex-row items-start">
+    <div className="p-6 text-black flex flex-col md:flex-row items-start">
       {/* Nội dung bên trái */}
-      <div className="w-1/2 max-w-3xl p-6">
+      <div className="w-full md:w-1/2 max-w-3xl p-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 pb-2">
           Overview
         </h2>
@@ -54,15 +54,15 @@ const IndexingAndSearch = () => {
         </ul>
       </div>
 
-      {/* Hiển thị ảnh bên phải với ảnh mặc định */}
-      <div className="w-1/2 flex justify-center items-center">
+      {/* Hiển thị ảnh bên phải (ẩn trên màn hình nhỏ) */}
+      <div className="hidden md:flex w-1/2 justify-center items-center">
         <motion.div
           key={displayedImage}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="w-[500px] h-[400px] rounded-lg shadow-lg bg-cover bg-center transition-all duration-500"
+          className="w-[500px] h-[400px] rounded-lg shadow-lg bg-cover bg-center transition-all duration-300"
           style={{ backgroundImage: `url(${displayedImage})` }}
         />
       </div>
