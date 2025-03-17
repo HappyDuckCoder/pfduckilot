@@ -37,11 +37,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "6",
-    name: "Sophia Wilson",
-    title: "Tailwind CSS: Thiết kế UI nhanh hơn",
-    description:
-      "Tìm hiểu cách sử dụng Tailwind để xây dựng giao diện đẹp và responsive.",
-    image: "Image/p2.png",
+    name: "Relational SQL",
+    title: "Các kí hiệu đại số và syntax MS SQL",
+    description: "Tổng hợp các kiến thức tự học về SQL",
+    image: "blog/sql.jpg",
   },
   {
     id: "7",
