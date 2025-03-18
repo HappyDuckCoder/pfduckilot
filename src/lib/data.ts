@@ -32,7 +32,7 @@ export const BlogBoxDummyData = [
     id: "5",
     name: "LlamaIndex",
     title: "Tìm hiểu framework LlamaIndex",
-    description: "Quá trình huấn luyện 1 chatbot AI của duckilot",
+    description: "Tìm hiểu về LlamaIndex",
     image: "blog/LlamaIndex.png",
   },
   {
@@ -44,11 +44,10 @@ export const BlogBoxDummyData = [
   },
   {
     id: "7",
-    name: "Chris Evans",
-    title: "Bắt đầu với Docker",
-    description:
-      "Docker giúp đóng gói và triển khai ứng dụng dễ dàng. Hãy cùng tìm hiểu cách sử dụng.",
-    image: "Image/p2.png",
+    name: "Duckilot",
+    title: "Cách sử dụng Ollama model để train dữ liệu cá nhân",
+    description: "Quá trình tạo chatbot hiểu cơ sở dữ liệu cá nhân",
+    image: "blog/ollama.png",
   },
   {
     id: "8",

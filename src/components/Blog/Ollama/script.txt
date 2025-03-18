@@ -1,0 +1,23 @@
+1. Quá trình chuẩn bị 
+- tải ollama
+- tải deepseek --> deepseek là gì
+- tải embedding nomic-embed-text --> nomic-embed-text 
+- giải thích embedding là gì cũng như nguyên lý hoạt động của nlp
+
+2. Thu thập dữ liệu 
+- nguồn thu thập: trung tâm y tế đà lạt
+- cách thu thập: craw bằng tay --> tự preprocessing 
+
+3. indexing
+
+4. test 
+- test terminal 
+- test với streamlit
+
+5. xây dựng thêm một vài chức năng
+
+6. đẩy lên hugging face 
+
+7. test cách lấy api về
+
+8. xây dựng nextjs app

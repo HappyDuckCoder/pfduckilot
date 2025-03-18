@@ -9,6 +9,7 @@ import Perceptron from "@/components/Blog/Perception/Perception";
 import Calculation from "@/components/Blog/Calculation/Calculation";
 import LlamaIndex from "@/components/Blog/LlamaIndex/LlamaIndex";
 import RelationalSQL from "@/components/Blog/RelationalSQL/RelationalSQL";
+import Ollama from "@/components/Blog/Ollama/Ollama";
 // import { metadataBlog } from "@/lib/metadata";
 
 // Định nghĩa danh sách component tương ứng với từng slug
@@ -19,6 +20,7 @@ const blogComponents: Record<string, React.FC> = {
   "4": Calculation,
   "5": LlamaIndex,
   "6": RelationalSQL,
+  "7": Ollama,
 };
 
 const SingleBlog = () => {
