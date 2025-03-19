@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FaApple, FaLinux, FaWindows } from "react-icons/fa";
 import Link from "next/link";
+import CodeBlockCal from "../Calculation/CalBlog";
 
 const steps = [
   {
@@ -77,13 +78,106 @@ const steps = [
         title: "Tải Deepseek",
         description:
           "Deepseek là một mô hình ngôn ngữ lớn (LLM) được thiết kế để xử lý NLP.",
-        content: <></>,
+        content: (
+          <div className="mx-auto p-4 bg-slate-100 shadow-lg rounded-xl">
+            <h2 className="text-blue-600 text-xl font-semibold mb-2">
+              Deepseek là gì?
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Deepseek là một mô hình ngôn ngữ lớn (Large Language Model - LLM)
+              được thiết kế để xử lý các tác vụ xử lý ngôn ngữ tự nhiên (NLP),
+              bao gồm phân loại văn bản, sinh văn bản, trả lời câu hỏi, và nhiều
+              ứng dụng AI khác. Deepseek có thể được sử dụng thông qua Ollama,
+              giúp dễ dàng triển khai trên hệ thống cục bộ.
+            </p>
+
+            <h2 className="text-blue-600 text-xl font-semibold mb-2">
+              Cách tải Deepseek
+            </h2>
+            <p className="text-gray-700">
+              Bạn có thể tải Deepseek bằng cách chạy lệnh sau trong terminal:
+            </p>
+            <CodeBlockCal
+              codeData={{
+                language: "bash",
+                filename: "terminal",
+                highlightLines: [],
+                code: "ollama pull deepseek",
+              }}
+            />
+            <p className="text-gray-700 mt-2">
+              Sau khi tải xong, bạn có thể khởi động mô hình với lệnh:
+            </p>
+            <CodeBlockCal
+              codeData={{
+                language: "bash",
+                filename: "terminal",
+                highlightLines: [],
+                code: "ollama run deepseek",
+              }}
+            />
+
+            <h2 className="text-blue-600 text-xl font-semibold mb-2 mt-4">
+              Tích hợp vào ứng dụng
+            </h2>
+            <p className="text-gray-700">
+              Bạn có thể tích hợp Deepseek vào ứng dụng bằng cách sử dụng API
+              của Ollama. Điều này giúp bạn có thể gửi truy vấn và nhận phản hồi
+              từ mô hình một cách dễ dàng mà không cần phải cài đặt thủ công
+              nhiều thành phần phức tạp.
+            </p>
+          </div>
+        ),
       },
       {
         title: "Tải embedding nomic-embed-text",
         description:
           "Embedding là quá trình chuyển đổi dữ liệu văn bản thành vector số để mô hình có thể hiểu và xử lý.",
-        content: <></>,
+        content: (
+          <div className="mx-auto p-4 bg-slate-100 shadow-lg rounded-xl">
+            <h2 className="text-blue-600 text-xl font-semibold mb-2">
+              Vector Embedding là gì?
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Vector Embedding là quá trình chuyển đổi văn bản thành các vector
+              số có ý nghĩa, giúp mô hình máy học và AI có thể hiểu nội dung ngữ
+              nghĩa của văn bản. Các vector này giúp biểu diễn văn bản dưới dạng
+              không gian đa chiều, hỗ trợ tốt cho các bài toán tìm kiếm thông
+              tin, phân cụm dữ liệu, và xử lý NLP.
+            </p>
+
+            <h2 className="text-blue-600 text-xl font-semibold mb-2">
+              Cách tải nomic-embed-text
+            </h2>
+            <p className="text-gray-700">
+              Để tải mô hình embedding <strong>nomic-embed-text</strong>, bạn có
+              thể sử dụng Ollama với lệnh:
+            </p>
+            <CodeBlockCal
+              codeData={{
+                language: "bash",
+                filename: "terminal",
+                highlightLines: [],
+                code: "ollama pull nomic-embed-text",
+              }}
+            />
+
+            <h2 className="text-blue-600 text-xl font-semibold mb-2 mt-4">
+              Ứng dụng của Vector Embedding
+            </h2>
+            <p className="text-gray-700">
+              Sau khi tải xong, bạn có thể sử dụng{" "}
+              <strong>nomic-embed-text</strong> để tạo vector embedding từ văn
+              bản. Các vector này có thể dùng trong các ứng dụng như:
+            </p>
+            <ul className="text-gray-700 list-disc pl-6 mt-2">
+              <li>Tìm kiếm văn bản nâng cao (Semantic Search)</li>
+              <li>Phân loại văn bản (Text Classification)</li>
+              <li>Phân cụm dữ liệu (Clustering)</li>
+              <li>Hệ thống gợi ý (Recommendation System)</li>
+            </ul>
+          </div>
+        ),
       },
     ],
   },
@@ -169,7 +263,7 @@ const steps = [
   },
 ];
 
-const Ollama: React.FC = () => {
+const Ollama = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   const toggleExpand = (index: number) => {

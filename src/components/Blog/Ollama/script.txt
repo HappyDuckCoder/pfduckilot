@@ -12,7 +12,12 @@
 
 4. test 
 - test terminal 
-- test với streamlit
+- test với streamlit:
+Các Tính Năng Chính
+Chatbot AI: Trả lời câu hỏi dựa trên dữ liệu có sẵn.
+Hiển thị phản hồi theo từng từ để tạo cảm giác chatbot đang "suy nghĩ".
+Hỗ trợ nhiều phòng chat, giúp người dùng quản lý các cuộc hội thoại khác nhau.
+Gợi ý 3 câu hỏi liên quan sau mỗi truy vấn, giúp cuộc hội thoại tiếp tục tự nhiên hơn.
 
 5. xây dựng thêm một vài chức năng
 
