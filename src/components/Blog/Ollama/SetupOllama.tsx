@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { FaApple, FaLinux, FaWindows } from "react-icons/fa";
 
@@ -21,7 +21,7 @@ const SetupOllama = () => {
         theo hướng dẫn chính thức.
       </p>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-1 md:grid-rows-2 gap-4">
         <p className="text-gray-700 flex items-center gap-4 bg-gray-200 p-3 rounded-lg shadow-sm">
           <strong>Bước 1:</strong> Truy cập trang web chính thức:
           <Link
