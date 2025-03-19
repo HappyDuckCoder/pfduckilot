@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { FaApple, FaLinux, FaWindows } from "react-icons/fa";
-import Link from "next/link";
 import CodeBlockCal from "../Calculation/CalBlog";
+import SetupOllama from "./SetupOllama";
 
 const steps = [
   {
@@ -11,92 +10,26 @@ const steps = [
       {
         title: "Tải Ollama",
         description: "Hướng dẫn cài đặt Ollama trên hệ thống.",
-        content: (
-          <div className=" mx-auto p-4 bg-slate-100 shadow-lg rounded-xl">
-            <h1 className="text-2xl font-semibold text-gray-900 mb-4">
-              Ollama là gì?
-            </h1>
-            <p className="text-gray-700 mb-6">
-              Ollama là một nền tảng cung cấp môi trường để chạy các mô hình
-              ngôn ngữ lớn (LLM) trên máy cá nhân.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              Cách cài đặt Ollama
-            </h2>
-            <p className="text-gray-700 mb-2">
-              Bạn có thể tải và cài đặt Ollama bằng cách truy cập trang chủ và
-              làm theo hướng dẫn chính thức.
-            </p>
-            <p className="text-gray-700 mb-2 flex items-center gap-4 bg-gray-200 p-3 rounded-lg shadow-sm">
-              <strong>Bước 1:</strong> Truy cập trang web chính thức:
-              <Link
-                href="https://ollama.com"
-                className="text-blue-500 hover:underline ml-1"
-                target="_blank"
-              >
-                https://ollama.com
-              </Link>
-            </p>
-            <p className="text-gray-700 mb-2 flex items-center gap-4 bg-gray-200 p-3 rounded-lg shadow-sm">
-              <strong>Bước 2:</strong> Chọn hệ điều hành phù hợp:
-              <span className="flex items-center gap-3">
-                <FaWindows
-                  className="text-blue-500 text-3xl border-2 border-blue-500 rounded-full p-1"
-                  title="Windows"
-                />
-                <FaLinux
-                  className="text-green-500 text-3xl border-2 border-green-500 rounded-full p-1"
-                  title="Linux"
-                />
-                <FaApple
-                  className="text-gray-500 text-3xl border-2 border-gray-500 rounded-full p-1"
-                  title="macOS"
-                />
-              </span>
-            </p>
-
-            <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
-              Các model của Ollama
-            </h2>
-            <p className="text-gray-700 mb-2">
-              Ollama hỗ trợ nhiều mô hình LLM và embedding khác nhau, bao gồm:
-            </p>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li>
-                <strong>LLM:</strong> Deepseek, LLaMA, Mistral...
-              </li>
-              <li>
-                <strong>Embedding:</strong> nomic-embed-text, OpenAI
-                embedding...
-              </li>
-            </ul>
-          </div>
-        ),
+        content: <SetupOllama />,
       },
       {
         title: "Tải Deepseek",
         description:
           "Deepseek là một mô hình ngôn ngữ lớn (LLM) được thiết kế để xử lý NLP.",
         content: (
-          <div className="mx-auto p-4 bg-slate-100 shadow-lg rounded-xl">
+          <div className="mx-auto max-w-screen-md lg:max-w-screen-lg p-6 sm:p-8 md:p-10 bg-slate-100 shadow-lg rounded-xl">
             <h2 className="text-blue-600 text-xl font-semibold mb-2">
               Deepseek là gì?
             </h2>
             <p className="text-gray-700 mb-4">
               Deepseek là một mô hình ngôn ngữ lớn (Large Language Model - LLM)
-              được thiết kế để xử lý các tác vụ xử lý ngôn ngữ tự nhiên (NLP),
-              bao gồm phân loại văn bản, sinh văn bản, trả lời câu hỏi, và nhiều
-              ứng dụng AI khác. Deepseek có thể được sử dụng thông qua Ollama,
-              giúp dễ dàng triển khai trên hệ thống cục bộ.
+              dành cho xử lý ngôn ngữ tự nhiên (NLP), hỗ trợ phân loại văn bản,
+              sinh văn bản, trả lời câu hỏi, và nhiều ứng dụng AI khác.
             </p>
 
             <h2 className="text-blue-600 text-xl font-semibold mb-2">
               Cách tải Deepseek
             </h2>
-            <p className="text-gray-700">
-              Bạn có thể tải Deepseek bằng cách chạy lệnh sau trong terminal:
-            </p>
             <CodeBlockCal
               codeData={{
                 language: "bash",
@@ -106,7 +39,7 @@ const steps = [
               }}
             />
             <p className="text-gray-700 mt-2">
-              Sau khi tải xong, bạn có thể khởi động mô hình với lệnh:
+              Sau khi tải xong, chạy lệnh sau để khởi động:
             </p>
             <CodeBlockCal
               codeData={{
@@ -117,14 +50,12 @@ const steps = [
               }}
             />
 
-            <h2 className="text-blue-600 text-xl font-semibold mb-2 mt-4">
+            <h2 className="text-blue-600 text-xl font-semibold mt-4">
               Tích hợp vào ứng dụng
             </h2>
             <p className="text-gray-700">
-              Bạn có thể tích hợp Deepseek vào ứng dụng bằng cách sử dụng API
-              của Ollama. Điều này giúp bạn có thể gửi truy vấn và nhận phản hồi
-              từ mô hình một cách dễ dàng mà không cần phải cài đặt thủ công
-              nhiều thành phần phức tạp.
+              Deepseek có thể được tích hợp vào ứng dụng qua API Ollama, giúp
+              gửi truy vấn và nhận phản hồi một cách linh hoạt.
             </p>
           </div>
         ),
@@ -132,27 +63,21 @@ const steps = [
       {
         title: "Tải embedding nomic-embed-text",
         description:
-          "Embedding là quá trình chuyển đổi dữ liệu văn bản thành vector số để mô hình có thể hiểu và xử lý.",
+          "Embedding là quá trình chuyển đổi văn bản thành vector số để mô hình có thể hiểu và xử lý.",
         content: (
-          <div className="mx-auto p-4 bg-slate-100 shadow-lg rounded-xl">
+          <div className="mx-auto max-w-screen-md lg:max-w-screen-lg p-6 sm:p-8 md:p-10 bg-slate-100 shadow-lg rounded-xl">
             <h2 className="text-blue-600 text-xl font-semibold mb-2">
               Vector Embedding là gì?
             </h2>
             <p className="text-gray-700 mb-4">
-              Vector Embedding là quá trình chuyển đổi văn bản thành các vector
-              số có ý nghĩa, giúp mô hình máy học và AI có thể hiểu nội dung ngữ
-              nghĩa của văn bản. Các vector này giúp biểu diễn văn bản dưới dạng
-              không gian đa chiều, hỗ trợ tốt cho các bài toán tìm kiếm thông
-              tin, phân cụm dữ liệu, và xử lý NLP.
+              Vector Embedding giúp chuyển đổi văn bản thành vector số, hỗ trợ
+              các tác vụ như tìm kiếm văn bản nâng cao, phân loại dữ liệu, và hệ
+              thống gợi ý.
             </p>
 
             <h2 className="text-blue-600 text-xl font-semibold mb-2">
               Cách tải nomic-embed-text
             </h2>
-            <p className="text-gray-700">
-              Để tải mô hình embedding <strong>nomic-embed-text</strong>, bạn có
-              thể sử dụng Ollama với lệnh:
-            </p>
             <CodeBlockCal
               codeData={{
                 language: "bash",
@@ -162,14 +87,9 @@ const steps = [
               }}
             />
 
-            <h2 className="text-blue-600 text-xl font-semibold mb-2 mt-4">
+            <h2 className="text-blue-600 text-xl font-semibold mt-4">
               Ứng dụng của Vector Embedding
             </h2>
-            <p className="text-gray-700">
-              Sau khi tải xong, bạn có thể sử dụng{" "}
-              <strong>nomic-embed-text</strong> để tạo vector embedding từ văn
-              bản. Các vector này có thể dùng trong các ứng dụng như:
-            </p>
             <ul className="text-gray-700 list-disc pl-6 mt-2">
               <li>Tìm kiếm văn bản nâng cao (Semantic Search)</li>
               <li>Phân loại văn bản (Text Classification)</li>
@@ -303,13 +223,21 @@ const Ollama = () => {
                         <div className="mt-2">{item.content}</div>
                       )}
                     </div>
-                    <ChevronDown
-                      className={`text-white transition-transform duration-300 ${
-                        expanded === itemKey ? "rotate-180" : ""
-                      } hover:text-gray-300 hover:scale-110 
-  border-2 border-transparent hover:border-gray-300 rounded-full p-1 cursor-pointer`}
-                      onClick={() => toggleExpand(itemKey)}
-                    />
+                    <div className="relative pl-2">
+                      <button
+                        className={`w-5 h-5 sm:w-7 sm:h-7 aspect-square rounded-full 
+  flex items-center justify-center 
+  border-2 border-transparent hover:border-gray-300 
+  hover:text-gray-300 transition-transform duration-300 cursor-pointer`}
+                        onClick={() => toggleExpand(itemKey)}
+                      >
+                        <ChevronDown
+                          className={`w-6 h-6 sm:w-8 sm:h-8 transition-transform duration-300 ${
+                            expanded === itemKey ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
                   </li>
                 );
               })}
