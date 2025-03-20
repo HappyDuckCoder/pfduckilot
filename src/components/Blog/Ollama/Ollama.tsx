@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import CodeBlockCal from "../Calculation/CalBlog";
 import SetupOllama from "./SetupOllama";
+import DeepseekSetup from "./DeepseekSetup";
+import NomicSetup from "./NomicSetup";
+import Source from "./Source";
+import CollectData from "./CollectData";
 
 const steps = [
   {
@@ -16,88 +19,13 @@ const steps = [
         title: "Tải Deepseek",
         description:
           "Deepseek là một mô hình ngôn ngữ lớn (LLM) được thiết kế để xử lý NLP.",
-        content: (
-          <div className="mx-auto max-w-screen-md lg:max-w-screen-lg p-6 sm:p-8 md:p-10 bg-slate-100 shadow-lg rounded-xl">
-            <h2 className="text-blue-600 text-xl font-semibold mb-2">
-              Deepseek là gì?
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Deepseek là một mô hình ngôn ngữ lớn (Large Language Model - LLM)
-              dành cho xử lý ngôn ngữ tự nhiên (NLP), hỗ trợ phân loại văn bản,
-              sinh văn bản, trả lời câu hỏi, và nhiều ứng dụng AI khác.
-            </p>
-
-            <h2 className="text-blue-600 text-xl font-semibold mb-2">
-              Cách tải Deepseek
-            </h2>
-            <CodeBlockCal
-              codeData={{
-                language: "bash",
-                filename: "terminal",
-                highlightLines: [],
-                code: "ollama pull deepseek",
-              }}
-            />
-            <p className="text-gray-700 mt-2">
-              Sau khi tải xong, chạy lệnh sau để khởi động:
-            </p>
-            <CodeBlockCal
-              codeData={{
-                language: "bash",
-                filename: "terminal",
-                highlightLines: [],
-                code: "ollama run deepseek",
-              }}
-            />
-
-            <h2 className="text-blue-600 text-xl font-semibold mt-4">
-              Tích hợp vào ứng dụng
-            </h2>
-            <p className="text-gray-700">
-              Deepseek có thể được tích hợp vào ứng dụng qua API Ollama, giúp
-              gửi truy vấn và nhận phản hồi một cách linh hoạt.
-            </p>
-          </div>
-        ),
+        content: <DeepseekSetup />,
       },
       {
         title: "Tải embedding nomic-embed-text",
         description:
           "Embedding là quá trình chuyển đổi văn bản thành vector số để mô hình có thể hiểu và xử lý.",
-        content: (
-          <div className="mx-auto max-w-screen-md lg:max-w-screen-lg p-6 sm:p-8 md:p-10 bg-slate-100 shadow-lg rounded-xl">
-            <h2 className="text-blue-600 text-xl font-semibold mb-2">
-              Vector Embedding là gì?
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Vector Embedding giúp chuyển đổi văn bản thành vector số, hỗ trợ
-              các tác vụ như tìm kiếm văn bản nâng cao, phân loại dữ liệu, và hệ
-              thống gợi ý.
-            </p>
-
-            <h2 className="text-blue-600 text-xl font-semibold mb-2">
-              Cách tải nomic-embed-text
-            </h2>
-            <CodeBlockCal
-              codeData={{
-                language: "bash",
-                filename: "terminal",
-                highlightLines: [],
-                code: "ollama pull nomic-embed-text",
-              }}
-            />
-
-            <h2 className="text-blue-600 text-xl font-semibold mt-4">
-              Ứng dụng của Vector Embedding
-            </h2>
-            <ul className="text-gray-700 list-disc pl-6 mt-2">
-              <li>Tìm kiếm văn bản nâng cao (Semantic Search)</li>
-              <li>Phân loại văn bản (Text Classification)</li>
-              <li>Phân cụm dữ liệu (Clustering)</li>
-              <li>Hệ thống gợi ý (Recommendation System)</li>
-            </ul>
-          </div>
-        ),
+        content: <NomicSetup />,
       },
     ],
   },
@@ -107,12 +35,12 @@ const steps = [
       {
         title: "Nguồn thu thập",
         description: "Trung tâm y tế Đà Lạt.",
-        content: <></>,
+        content: <Source />,
       },
       {
         title: "Cách thu thập",
-        description: "Craw bằng tay và tự xử lý trước (preprocessing).",
-        content: <></>,
+        description: "Copy và tạo các file txt",
+        content: <CollectData />,
       },
     ],
   },
