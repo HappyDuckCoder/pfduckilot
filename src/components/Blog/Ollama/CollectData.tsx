@@ -3,20 +3,20 @@ import CodeBlockCal from "../Calculation/CalBlog";
 
 const CollectData = () => {
   return (
-    <div className="mx-auto max-w-screen-md lg:max-w-screen-lg p-6 sm:p-8 md:p-10 bg-slate-100 shadow-lg rounded-xl">
-      <h2 className="text-blue-600 text-xl font-semibold mb-2">
+    <div className="mx-auto max-w-full lg:max-w-screen-lg p-4 sm:p-6 md:p-8 bg-slate-100 shadow-lg rounded-xl">
+      <h2 className="text-blue-600 text-lg sm:text-xl font-semibold mb-2">
         Phương pháp thu thập dữ liệu
       </h2>
-      <p className="text-gray-700 mb-4">
+      <p className="text-gray-700 text-sm sm:text-base mb-4">
         Dữ liệu được thu thập bằng cách sao chép thông tin từ các nguồn chính
         thức và lưu trữ dưới dạng tệp văn bản (.txt). Quá trình này giúp dễ dàng
         xử lý và tích hợp vào hệ thống chatbot.
       </p>
 
-      <h2 className="text-blue-600 text-xl font-semibold mb-2">
+      <h2 className="text-blue-600 text-lg sm:text-xl font-semibold mb-2">
         Quy trình thu thập dữ liệu
       </h2>
-      <ul className="text-gray-700 list-disc pl-6 mt-2">
+      <ul className="text-gray-700 list-disc pl-5 sm:pl-6 mt-2 text-sm sm:text-base">
         {[
           "Xác định nguồn dữ liệu đáng tin cậy.",
           "Sao chép nội dung cần thiết từ hệ thống hoặc tài liệu y khoa.",
@@ -28,10 +28,10 @@ const CollectData = () => {
         ))}
       </ul>
 
-      <h2 className="text-blue-600 text-xl font-semibold mt-4">
+      <h2 className="text-blue-600 text-lg sm:text-xl font-semibold mt-4">
         Lợi ích của phương pháp này
       </h2>
-      <ul className="text-gray-700 list-disc pl-6 mt-2">
+      <ul className="text-gray-700 list-disc pl-5 sm:pl-6 mt-2 text-sm sm:text-base">
         {[
           "Dữ liệu có cấu trúc đơn giản, dễ dàng xử lý.",
           "Tiết kiệm thời gian thu thập và tích hợp.",
@@ -42,15 +42,15 @@ const CollectData = () => {
         ))}
       </ul>
 
-      <h2 className="text-blue-600 text-xl font-semibold mt-4">
+      <h2 className="text-blue-600 text-lg sm:text-xl font-semibold mt-4">
         Lập trình tiền xử lý dữ liệu (Preprocessing)
       </h2>
-      <p className="text-gray-700 mb-4">
+      <p className="text-gray-700 text-sm sm:text-base mb-4">
         Sau khi thu thập, dữ liệu cần được làm sạch và chuẩn hóa trước khi đưa
         vào hệ thống AI.
       </p>
 
-      <ul className="text-gray-700 list-disc pl-6 mt-2">
+      <ul className="text-gray-700 list-disc pl-5 sm:pl-6 mt-2 text-sm sm:text-base">
         {[
           "Loại bỏ các ký tự đặc biệt và khoảng trắng dư thừa.",
           "Chuẩn hóa chữ hoa - chữ thường để tránh trùng lặp.",
@@ -62,38 +62,29 @@ const CollectData = () => {
         ))}
       </ul>
 
-      <h2 className="text-blue-600 text-xl font-semibold mt-4">
+      <h2 className="text-blue-600 text-lg sm:text-xl font-semibold mt-4">
         Ví dụ code Python xử lý dữ liệu
       </h2>
 
-      <CodeBlockCal
-        codeData={{
-          language: "python",
-          filename: "collect_data.py",
-          highlightLines: [5, 19, 36, 52],
-          code: `import os
+      {/* Đảm bảo mã nguồn có thể cuộn ngang khi trên màn hình nhỏ */}
+      <div className="overflow-x-auto bg-gray-900 text-white p-4 rounded-lg">
+        <CodeBlockCal
+          codeData={{
+            language: "python",
+            filename: "collect_data.py",
+            highlightLines: [5, 19, 36, 52],
+            code: `import os
 import re
 import unicodedata
 
 def preprocess_text(text):
-    """
-    Làm sạch nội dung văn bản tiếng Việt:
-    - Chuẩn hóa Unicode để tránh lỗi mã hóa.
-    - Loại bỏ ký tự đặc biệt (chỉ giữ lại chữ cái, số, khoảng trắng và dấu câu thông dụng).
-    - Chuyển thành chữ thường.
-    - Xóa khoảng trắng dư thừa và dòng trống.
-    """
-    text = unicodedata.normalize("NFC", text)  # Chuẩn hóa Unicode cho tiếng Việt
+    text = unicodedata.normalize("NFC", text)  # Chuẩn hóa Unicode
     text = re.sub(r"[^\w\s,\\.?!áàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]", "", text)
-    text = text.lower().strip()  # Chuyển thành chữ thường, xóa khoảng trắng đầu/cuối
-    text = "\\n".join([line.strip() for line in text.split("\\n") if line.strip()])  # Xóa dòng trống
+    text = text.lower().strip()
+    text = "\\n".join([line.strip() for line in text.split("\\n") if line.strip()])
     return text
 
 def preprocess_folder(folder_path):
-    """
-    Xử lý tất cả các file .txt trong thư mục.
-    - Đọc nội dung, làm sạch và ghi đè lại file.
-    """
     if not os.path.exists(folder_path):
         print(f"❌ Lỗi: Thư mục '{folder_path}' không tồn tại!")
         return
@@ -121,12 +112,12 @@ def preprocess_folder(folder_path):
 
     print("\\n🎉 Hoàn tất! Tất cả file đã được làm sạch.")
 
-# Ví dụ sử dụng
 if __name__ == "__main__":
-    folder_path = "../database"  # Thay thế bằng đường dẫn thực tế
+    folder_path = "../database"
     preprocess_folder(folder_path)`,
-        }}
-      />
+          }}
+        />
+      </div>
     </div>
   );
 };
