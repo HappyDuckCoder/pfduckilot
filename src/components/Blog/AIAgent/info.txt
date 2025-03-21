@@ -1,0 +1,217 @@
+RETRIEVAL-AUGMENTED GENERATION (RAG)
+
+1. Định nghĩa
+
+Retrieval-Augmented Generation (RAG) là một kỹ thuật giúp mô hình ngôn ngữ lớn (LLM - Large Language Model) cải thiện độ chính xác và tính cập nhật của phản hồi bằng cách truy xuất thông tin từ các nguồn bên ngoài trước khi sinh văn bản. Điều này giúp LLM vượt qua giới hạn của bộ dữ liệu huấn luyện ban đầu và cung cấp câu trả lời sát với thực tế hơn.
+
+2. Cơ chế hoạt động
+
+RAG hoạt động qua hai giai đoạn chính: Truy xuất (Retrieval) và Tạo văn bản (Generation).
+
+a) Truy xuất (Retrieval)
+
+Khi nhận một truy vấn từ người dùng, hệ thống sẽ tìm kiếm thông tin liên quan từ các nguồn dữ liệu như cơ sở dữ liệu văn bản, kho lưu trữ vector (vector database) hoặc tài liệu nội bộ.
+
+Các phương pháp phổ biến bao gồm:
+
+Vector Search: Sử dụng embedding để so sánh độ tương đồng ngữ nghĩa.
+
+Keyword Search: Sử dụng các thuật toán như BM25 để tìm kiếm theo từ khóa.
+
+Những thuật toán xếp hạng tài liệu như BM25, cosine similarity, hay FAISS giúp chọn lọc thông tin có mức độ liên quan cao nhất.
+
+b) Tạo văn bản (Generation)
+
+Mô hình LLM nhận thông tin từ bước truy xuất và tổng hợp để tạo phản hồi.
+
+Thay vì chỉ dựa vào dữ liệu huấn luyện trước đó, mô hình có thể kết hợp thông tin mới truy xuất để tạo câu trả lời chính xác hơn.
+
+Một số phương pháp tối ưu:
+
+Context Window Optimization: Quản lý độ dài ngữ cảnh để tránh tràn bộ nhớ mô hình.
+
+Knowledge Distillation: Giúp mô hình học tập từ nhiều nguồn khác nhau.
+
+3. Mô hình hoạt động đơn giản
+
++------------+       +------------+       +------------+
+|  User      | ----> |  Retrieval | ----> |  Generation |
++------------+       +------------+       +------------+
+
+4. Ví dụ
+
+Người dùng hỏi: "Tình hình nghiên cứu về AI năm 2024?"
+
+Hệ thống truy xuất thông tin từ Google Scholar.
+
+Trích xuất các bài báo mới nhất.
+
+Tổng hợp thông tin và trả lời người dùng.
+
+5. Công cụ phổ biến
+
+LlamaIndex: Kết nối LLM với dữ liệu nội bộ.
+
+Pinecone: Vector Database lưu trữ thông tin.
+
+Elasticsearch: Truy vấn dữ liệu nhanh chóng.
+
+AI AGENT
+
+1. Định nghĩa
+
+AI Agent (Tác nhân trí tuệ nhân tạo) là một hệ thống có khả năng tự động nhận thông tin từ môi trường, phân tích, ra quyết định và thực hiện hành động để đạt được mục tiêu. AI Agent có thể hoạt động độc lập hoặc kết hợp với các hệ thống khác để tối ưu hóa quy trình xử lý thông tin.
+
+2. Cơ chế hoạt động
+
+AI Agent hoạt động theo vòng lặp Cảm nhận - Suy luận - Hành động.
+
+a) Cảm nhận (Perception)
+
+Nhận dữ liệu từ người dùng, API, cảm biến hoặc hệ thống khác.
+
+Dữ liệu có thể ở dạng văn bản, hình ảnh, âm thanh hoặc tín hiệu từ môi trường.
+
+b) Suy luận (Reasoning)
+
+Áp dụng AI để phân tích dữ liệu đầu vào.
+
+Sử dụng LLM hoặc machine learning để hiểu và dự đoán hành động phù hợp.
+
+Có thể sử dụng logic if-then hoặc thuật toán học sâu để xử lý dữ liệu.
+
+c) Hành động (Action)
+
+Sau khi phân tích, AI Agent thực hiện hành động như phản hồi người dùng, cập nhật hệ thống hoặc kích hoạt quy trình tự động.
+
+3. Các thành phần nâng cao của AI Agent
+
+Memory (Bộ nhớ): Lưu trữ thông tin tương tác trước đó để cải thiện phản hồi trong tương lai.
+
+Planning (Lập kế hoạch): Xác định các bước thực hiện dựa trên mục tiêu và tình huống hiện tại.
+
+Tool Use (Sử dụng công cụ): Gọi API, truy xuất dữ liệu, thực thi mã lệnh để mở rộng khả năng.
+
+Adaptability (Khả năng thích nghi): Tự học và cải thiện dựa trên phản hồi và dữ liệu mới.
+
+4. Mô hình hoạt động mở rộng
+
++-----------+       +------------+       +------------+       +-----------+
+|  User     | ----> |  Perceive  | ----> |  Reasoning | ----> |  Action   |
++-----------+       +------------+       +------------+       +-----------+
+            |                 |                 |                 |
+       +--------+         +---------+        +---------+        +-------+
+       | Memory |         | Tools   |        | API     |        | Output|
+       +--------+         +---------+        +---------+        +-------+
+
+5. Ví dụ
+
+Chatbot hỗ trợ khách hàng trong bệnh viện:
+
+Người dùng hỏi: "Bệnh viện có khám tim mạch không?"
+
+AI Agent nhận diện câu hỏi, tìm kiếm trong cơ sở dữ liệu nội bộ và phản hồi: "Có, bệnh viện cung cấp dịch vụ khám tim mạch từ 8h - 17h."
+
+Nếu người dùng muốn đặt lịch hẹn, AI Agent có thể tự động gửi yêu cầu đến hệ thống quản lý lịch hẹn.
+
+6. Công cụ phổ biến
+
+LangChain: Xây dựng AI Agent kết hợp với nhiều công cụ khác nhau.
+
+Auto-GPT: AI Agent có khả năng tự lên kế hoạch và thực hiện tác vụ tự động.
+
+OpenAI Function Calling: Gọi API bên ngoài để mở rộng chức năng của AI Agent.
+
+AgentGPT: AI Agent có khả năng lập kế hoạch dài hạn và thực thi nhiều bước tự động.
+
+Chatbot chăm sóc khách hàng (LivePerson, Intercom).
+
+Trợ lý ảo (Google Assistant, Alexa).
+
+AI hỗ trợ y tế (IBM Watson).
+
+AI AGENTIC
+
+1. Định nghĩa
+
+AI Agentic là phiên bản nâng cao của AI Agent, có khả năng tự lập kế hoạch, tự điều chỉnh hành động và thực hiện tác vụ phức tạp mà không cần sự can thiệp của con người. AI Agentic kết hợp nhiều công cụ để hoàn thành nhiệm vụ một cách tự động và hiệu quả.
+
+2. Cơ chế hoạt động
+
+AI Agentic bổ sung các thành phần quan trọng:
+
+a) Lập kế hoạch (Planning)
+
+Dựa trên mục tiêu và dữ liệu thu thập được, AI Agentic tự động tạo kế hoạch hành động.
+
+Có thể sử dụng thuật toán tối ưu hóa như Monte Carlo Tree Search (MCTS) hoặc Graph-based Planning để xác định bước đi tối ưu.
+
+b) Bộ nhớ (Memory)
+
+Lưu trữ lịch sử tương tác để sử dụng trong tương lai.
+
+Sử dụng cơ sở dữ liệu vector hoặc bộ nhớ ngữ cảnh để tối ưu hóa quyết định.
+
+c) Công cụ hỗ trợ (Tools)
+
+Gọi API bên ngoài, tìm kiếm dữ liệu theo thời gian thực.
+
+Thực thi code, phân tích tài liệu, hoặc tự động hóa các quy trình phức tạp.
+
+3. Mô hình hoạt động mở rộng
+
++-----------------+   +-------------+   +------------+   +-------------+
+| Perception     | → | Reasoning   | → | Planning   | → | Execution   |
++-----------------+   +-------------+   +------------+   +-------------+
+            |                 |               |             |
+      +--------+         +---------+       +--------+      +-------+
+      | Memory |         | Tools   |       | API    |      | Output|
+      +--------+         +---------+       +--------+      +-------+
+
+4. Ví dụ công cụ
+
+LangChain (Tích hợp AI với công cụ tìm kiếm, API).
+
+Auto-GPT (AI tự động lập kế hoạch và thực thi).
+
+OpenAI Function Calling (Gọi API để truy xuất thông tin).
+
+AUTOMATION
+
+1. Định nghĩa
+
+Tự động hóa là quá trình sử dụng công nghệ để thực hiện các tác vụ mà trước đây yêu cầu con người, giúp tăng hiệu suất, giảm chi phí và hạn chế sai sót.
+
+2. Cơ chế hoạt động
+
+Hệ thống tự động hóa hoạt động theo các bước:
+
+Giám sát (Monitoring): Theo dõi dữ liệu từ nhiều nguồn (API, cảm biến, logs, dữ liệu thời gian thực).
+
+Phân tích (Analysis): Xác định các điều kiện kích hoạt hoặc các hành động cần thiết.
+
+Kích hoạt hành động (Trigger Action): Khi điều kiện được thỏa mãn, hệ thống sẽ tự động thực hiện tác vụ.
+
+Học và tối ưu hóa (Learning & Optimization): Sử dụng AI để cải thiện hiệu suất theo thời gian.
+
+3. Các loại tự động hóa
+
+Tự động hóa quy trình làm việc (Workflow Automation): Kết nối các công cụ để thực hiện công việc tự động.
+
+Tự động hóa quy trình robot (RPA - Robotic Process Automation): Sử dụng bot để thực hiện các tác vụ lặp lại.
+
+Tự động hóa dữ liệu (Data Automation): Xử lý, làm sạch và phân tích dữ liệu mà không cần con người can thiệp.
+
+4. Công cụ phổ biến
+
+n8n, Zapier: Workflow automation.
+
+Airflow: Data pipeline automation.
+
+UiPath, Blue Prism: RPA - Tự động hóa quy trình kinh doanh.
+
+Kubernetes, Terraform: Tự động hóa hạ tầng CNTT.
+
+
+
+
