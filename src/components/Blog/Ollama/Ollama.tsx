@@ -5,6 +5,7 @@ import DeepseekSetup from "./DeepseekSetup";
 import NomicSetup from "./NomicSetup";
 import Source from "./Source";
 import CollectData from "./CollectData";
+import IndexingProcess from "./IndexingProcess";
 
 const steps = [
   {
@@ -50,28 +51,7 @@ const steps = [
       {
         title: "Quá trình lập chỉ mục",
         description: "Lập chỉ mục dữ liệu thu thập được.",
-        content: (
-          <>
-            <div>
-              <p>Lập chỉ mục dữ liệu thu thập được.</p>
-              <div>
-                <p>
-                  Trong quá trình xây dựng hệ thống RAG local, lập chỉ mục đóng
-                  vai trò quan trọng để tối ưu hóa khả năng truy xuất thông tin.
-                </p>
-                <p>
-                  Dưới đây là các bước cơ bản khi sử dụng Nomic và Deepseek:
-                </p>
-                <ul>
-                  <li>Thu thập và làm sạch dữ liệu.</li>
-                  <li>Chuyển đổi dữ liệu thành embedding bằng Deepseek.</li>
-                  <li>Lưu trữ embedding vào Nomic.</li>
-                  <li>Triển khai tìm kiếm và truy xuất thông tin.</li>
-                </ul>
-              </div>
-            </div>
-          </>
-        ),
+        content: <IndexingProcess />,
       },
     ],
   },
@@ -81,12 +61,20 @@ const steps = [
       {
         title: "Test bằng terminal",
         description: "Kiểm tra trực tiếp trên terminal.",
-        content: <></>,
+        content: (
+          <>
+            <p>Sẽ được bổ sung sau</p>
+          </>
+        ),
       },
       {
         title: "Test với Streamlit",
         description: "Sử dụng Streamlit để chạy giao diện kiểm thử.",
-        content: <></>,
+        content: (
+          <>
+            <p>Sẽ được bổ sung sau</p>
+          </>
+        ),
       },
     ],
   },
@@ -96,7 +84,14 @@ const steps = [
       {
         title: "Bổ sung tính năng",
         description: "Bổ sung các tính năng mới theo nhu cầu.",
-        content: <></>,
+        content: (
+          <>
+            <p>
+              Sẽ được bổ sung sau, bao gồm các chức năng chat, gợi ý, stream,
+              room, ...
+            </p>
+          </>
+        ),
       },
     ],
   },
@@ -106,7 +101,11 @@ const steps = [
       {
         title: "Phát triển giao diện",
         description: "Xây dựng ứng dụng sử dụng chatbot với Next.js.",
-        content: <></>,
+        content: (
+          <>
+            <p>web bệnh viện</p>
+          </>
+        ),
       },
     ],
   },

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Menu, Section } from "lucide-react";
-import { headers } from "next/headers";
+import { Menu } from "lucide-react";
 
 const blogContent = [
   {
