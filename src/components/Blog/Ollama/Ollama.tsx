@@ -50,7 +50,28 @@ const steps = [
       {
         title: "Quá trình lập chỉ mục",
         description: "Lập chỉ mục dữ liệu thu thập được.",
-        content: <></>,
+        content: (
+          <>
+            <div>
+              <p>Lập chỉ mục dữ liệu thu thập được.</p>
+              <div>
+                <p>
+                  Trong quá trình xây dựng hệ thống RAG local, lập chỉ mục đóng
+                  vai trò quan trọng để tối ưu hóa khả năng truy xuất thông tin.
+                </p>
+                <p>
+                  Dưới đây là các bước cơ bản khi sử dụng Nomic và Deepseek:
+                </p>
+                <ul>
+                  <li>Thu thập và làm sạch dữ liệu.</li>
+                  <li>Chuyển đổi dữ liệu thành embedding bằng Deepseek.</li>
+                  <li>Lưu trữ embedding vào Nomic.</li>
+                  <li>Triển khai tìm kiếm và truy xuất thông tin.</li>
+                </ul>
+              </div>
+            </div>
+          </>
+        ),
       },
     ],
   },
@@ -75,26 +96,6 @@ const steps = [
       {
         title: "Bổ sung tính năng",
         description: "Bổ sung các tính năng mới theo nhu cầu.",
-        content: <></>,
-      },
-    ],
-  },
-  {
-    title: "Đẩy lên Hugging Face",
-    items: [
-      {
-        title: "Upload mô hình",
-        description: "Đưa mô hình lên Hugging Face để sử dụng API.",
-        content: <></>,
-      },
-    ],
-  },
-  {
-    title: "Test API",
-    items: [
-      {
-        title: "Thử nghiệm API",
-        description: "Kiểm tra cách lấy API từ Hugging Face.",
         content: <></>,
       },
     ],

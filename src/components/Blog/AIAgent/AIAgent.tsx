@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Section } from "lucide-react";
+import { headers } from "next/headers";
 
 const blogContent = [
   {
@@ -343,6 +344,269 @@ const blogContent = [
       },
     ],
   },
+  {
+    title: "AI AGENTIC",
+    sections: [
+      {
+        heading: "1. Định nghĩa",
+        content: (
+          <>
+            <p>
+              AI Agentic là phiên bản nâng cao của AI Agent, có khả năng tự lập
+              kế hoạch, tự điều chỉnh hành động và thực hiện tác vụ phức tạp mà
+              không cần sự can thiệp của con người. AI Agentic kết hợp nhiều
+              công cụ để hoàn thành nhiệm vụ một cách tự động và hiệu quả.
+            </p>
+          </>
+        ),
+      },
+      {
+        heading: "Cơ chế hoạt động",
+        content: (
+          <div className="">
+            <p className="text-lg font-semibold mb-4">
+              AI Agentic bổ sung các thành phần quan trọng:
+            </p>
+
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-blue-600">
+                a) Lập kế hoạch (Planning)
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Dựa trên mục tiêu và dữ liệu thu thập được, AI Agentic tự động
+                tạo kế hoạch hành động.
+              </p>
+              <p className="text-gray-400 mt-2">
+                Có thể sử dụng thuật toán tối ưu hóa như{" "}
+                <span className="font-medium">
+                  Monte Carlo Tree Search (MCTS)
+                </span>{" "}
+                hoặc <span className="font-medium">Graph-based Planning</span>{" "}
+                để xác định bước đi tối ưu.
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-green-600">
+                b) Bộ nhớ (Memory)
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Lưu trữ lịch sử tương tác để sử dụng trong tương lai.
+              </p>
+              <p className="text-gray-400 mt-2">
+                Sử dụng cơ sở dữ liệu vector hoặc bộ nhớ ngữ cảnh để tối ưu hóa
+                quyết định.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-purple-600">
+                c) Công cụ hỗ trợ (Tools)
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Gọi API bên ngoài, tìm kiếm dữ liệu theo thời gian thực.
+              </p>
+              <p className="text-gray-400 mt-2">
+                Thực thi code, phân tích tài liệu, hoặc tự động hóa các quy
+                trình phức tạp.
+              </p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        heading: "3. Mô hình hoạt động mở rộng",
+        content: (
+          <div className="flex flex-col items-center space-y-6">
+            {/* Hàng trên cùng */}
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              {[
+                { label: "Perception", color: "bg-blue-500", sub: "Memory" },
+                { label: "Reasoning", color: "bg-green-500", sub: "Tools" },
+                { label: "Planning", color: "bg-yellow-500", sub: "API" },
+                { label: "Execution", color: "bg-red-500", sub: "Output" },
+              ].map((step, index, arr) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center relative"
+                >
+                  {/* Hình chữ nhật chính */}
+                  <div
+                    className={`w-32 h-16 sm:w-36 sm:h-20 flex items-center justify-center ${step.color} text-white font-bold text-lg sm:text-xl rounded-lg shadow-lg`}
+                  >
+                    {step.label}
+                  </div>
+                  {/* Mũi tên chỉ xuống */}
+                  <div className="text-2xl sm:text-3xl font-bold mt-2">↓</div>
+                  {/* Hình chữ nhật phụ bên dưới */}
+                  <div className="w-24 h-12 sm:w-28 sm:h-14 flex items-center justify-center bg-gray-300 text-black font-semibold rounded-md shadow-md mt-2">
+                    {step.sub}
+                  </div>
+                  {/* Mũi tên ngang (trừ phần tử cuối) */}
+                  {index < arr.length - 1 && (
+                    <div className="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 text-3xl sm:text-4xl font-bold hidden sm:block">
+                      →
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ),
+      },
+      {
+        heading: "4. Ví dụ công cụ",
+        content: (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            {[
+              {
+                name: "LangChain",
+                desc: "Tích hợp AI với công cụ tìm kiếm, API",
+                color: "bg-blue-500",
+              },
+              {
+                name: "Auto-GPT",
+                desc: "AI tự động lập kế hoạch và thực thi",
+                color: "bg-green-500",
+              },
+              {
+                name: "OpenAI Function Calling",
+                desc: "Gọi API để truy xuất thông tin",
+                color: "bg-yellow-500",
+              },
+            ].map((tool, index) => (
+              <div
+                key={index}
+                className={`p-4 rounded-lg shadow-md text-white ${tool.color}`}
+              >
+                <h3 className="text-lg font-bold">{tool.name}</h3>
+                <p className="text-sm">{tool.desc}</p>
+              </div>
+            ))}
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Automation",
+    sections: [
+      {
+        heading: "1. Định nghĩa",
+        content: (
+          <>
+            <p>
+              Tự động hóa là quá trình sử dụng công nghệ để thực hiện các tác vụ
+              mà trước đây yêu cầu con người, giúp tăng hiệu suất, giảm chi phí
+              và hạn chế sai sót.
+            </p>
+          </>
+        ),
+      },
+      {
+        heading: "2. Cơ chế hoạt động",
+        content: (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            {[
+              {
+                name: "Giám sát",
+                desc: "Theo dõi dữ liệu từ API, cảm biến, logs",
+                color: "bg-blue-500",
+              },
+              {
+                name: "Phân tích",
+                desc: "Xác định điều kiện kích hoạt & hành động",
+                color: "bg-green-500",
+              },
+              {
+                name: "Kích hoạt hành động",
+                desc: "Tự động thực hiện khi điều kiện thỏa mãn",
+                color: "bg-yellow-500",
+              },
+              {
+                name: "Học & tối ưu hóa",
+                desc: "Cải thiện hiệu suất với AI",
+                color: "bg-red-500",
+              },
+            ].map((step, index) => (
+              <div
+                key={index}
+                className={`p-4 rounded-lg shadow-md text-white ${step.color}`}
+              >
+                <h3 className="text-lg font-bold">{step.name}</h3>
+                <p className="text-sm">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        ),
+      },
+      {
+        heading: "3. Các loại tự động hóa",
+        content: (
+          <ul className="list-disc list-inside space-y-2 text-gray-400 mt-4">
+            {[
+              {
+                title: "Tự động hóa quy trình làm việc (Workflow Automation)",
+                desc: "Kết nối các công cụ để thực hiện công việc tự động.",
+              },
+              {
+                title:
+                  "Tự động hóa quy trình robot (RPA - Robotic Process Automation)",
+                desc: "Sử dụng bot để thực hiện các tác vụ lặp lại.",
+              },
+              {
+                title: "Tự động hóa dữ liệu (Data Automation)",
+                desc: "Xử lý, làm sạch và phân tích dữ liệu mà không cần con người can thiệp.",
+              },
+            ].map((item, index) => (
+              <li key={index}>
+                <span className="font-semibold">{item.title}:</span> {item.desc}
+              </li>
+            ))}
+          </ul>
+        ),
+      },
+      {
+        heading: "4. Công cụ phổ biến",
+        content: (
+          <div className="flex flex-wrap justify-center gap-6 mt-4">
+            {[
+              {
+                tools: "n8n, Zapier",
+                desc: "Workflow automation",
+                color: "bg-blue-500",
+              },
+              {
+                tools: "Airflow",
+                desc: "Data pipeline automation",
+                color: "bg-green-500",
+              },
+              {
+                tools: "UiPath, Blue Prism",
+                desc: "RPA - Tự động hóa quy trình",
+                color: "bg-yellow-500",
+              },
+              {
+                tools: "Kubernetes, Terraform",
+                desc: "Tự động hóa hạ tầng CNTT",
+                color: "bg-red-500",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`w-48 h-28 flex flex-col items-center justify-center space-y-2 rounded-lg shadow-lg text-white font-semibold p-4 text-center
+                  transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out
+                  ${item.color}`}
+              >
+                <div className="text-lg">{item.tools}</div>
+                <div className="text-sm opacity-90">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+        ),
+      },
+    ],
+  },
 ];
 
 const AIAgent = () => {
@@ -399,7 +663,7 @@ const AIAgent = () => {
       <div className="p-6 text-white min-h-screen flex flex-col items-center w-3/4 mx-auto">
         <header className="text-center py-20">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-100 drop-shadow-lg tracking-wide">
-            🚀 AI & Technology Blog
+            🚀 AI Agent & AI Agentic
           </h1>
         </header>
         <div className="">
