@@ -11,6 +11,7 @@ import LlamaIndex from "@/components/Blog/LlamaIndex/LlamaIndex";
 import RelationalSQL from "@/components/Blog/RelationalSQL/RelationalSQL";
 import Ollama from "@/components/Blog/Ollama/Ollama";
 import AIAgent from "@/components/Blog/AIAgent/AIAgent";
+import UXUI from "@/components/Blog/UXUI/UXUI";
 // import { metadataBlog } from "@/lib/metadata";
 
 // Định nghĩa danh sách component tương ứng với từng slug
@@ -23,6 +24,7 @@ const blogComponents: Record<string, React.FC> = {
   "6": RelationalSQL,
   "7": Ollama,
   "8": AIAgent,
+  "9": UXUI,
 };
 
 const SingleBlog = () => {

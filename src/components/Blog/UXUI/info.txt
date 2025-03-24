@@ -1,39 +1,28 @@
 A. UX và UI là gì?
-UX (User Experience - Trải nghiệm người dùng): Là cách người dùng cảm nhận và tương tác với sản phẩm. UX tốt giúp người dùng dễ dàng sử dụng, tìm kiếm thông tin nhanh chóng và hài lòng với trải nghiệm tổng thể.
-UI (User Interface - Giao diện người dùng): Là phần hiển thị mà người dùng nhìn thấy và tương tác, bao gồm màu sắc, typography, nút bấm, hình ảnh, bố cục, v.v.
+UX (User Experience - Trải nghiệm người dùng): 
+Là cách người dùng cảm nhận và tương tác với sản phẩm. UX tốt giúp người dùng dễ dàng sử dụng, tìm kiếm thông tin nhanh chóng và hài lòng với trải nghiệm tổng thể.
+UI (User Interface - Giao diện người dùng): 
+Là phần hiển thị mà người dùng nhìn thấy và tương tác, bao gồm màu sắc, typography, nút bấm, hình ảnh, bố cục, v.v.
 
 B. Persona
 1. Định nghĩa Persona
 Persona là một hình mẫu đại diện của người dùng thật dựa trên nghiên cứu và dữ liệu thực tế. Nó không chỉ là một nhân vật hư cấu mà còn chứa đựng thông tin về nhu cầu, hành vi, động cơ, và những khó khăn mà người dùng gặp phải khi tương tác với sản phẩm.
+
 2. Các thành phần chính của một Persona
-Thông tin cá nhân:
 
-Tuổi, giới tính, nghề nghiệp, trình độ học vấn.
-
+Thông tin cá nhân: Tuổi, giới tính, nghề nghiệp, trình độ học vấn.
 Ví dụ: "Lan, 28 tuổi, chuyên viên marketing."
 
-Mục tiêu và nhu cầu:
-
-Mục tiêu khi sử dụng sản phẩm/dịch vụ, những gì họ mong đợi đạt được.
-
+Mục tiêu và nhu cầu: Mục tiêu khi sử dụng sản phẩm/dịch vụ, những gì họ mong đợi đạt được.
 Ví dụ: "Lan mong muốn quản lý chiến dịch quảng cáo hiệu quả, tiết kiệm thời gian."
 
-Động cơ và hành vi:
-
-Các hành động thường ngày, cách thức tiếp cận thông tin và công nghệ.
-
+Động cơ và hành vi: Các hành động thường ngày, cách thức tiếp cận thông tin và công nghệ.
 Ví dụ: "Luôn tìm kiếm các công cụ hỗ trợ làm việc hiệu quả trên điện thoại."
 
-Khó khăn và pain points:
-
-Những trở ngại, vấn đề mà họ gặp phải trong quá trình sử dụng sản phẩm hiện có.
-
+Khó khăn và pain points: Những trở ngại, vấn đề mà họ gặp phải trong quá trình sử dụng sản phẩm hiện có.
 Ví dụ: "Không hài lòng với giao diện phức tạp của phần mềm hiện tại."
 
-Thông tin tâm lý:
-
-Tâm trạng, thái độ, giá trị và sở thích cá nhân.
-
+Thông tin tâm lý: Tâm trạng, thái độ, giá trị và sở thích cá nhân.
 Ví dụ: "Lan đề cao sự tiện lợi và giao diện trực quan trong thiết kế."
 
 3. Lợi ích khi sử dụng Persona trong thiết kế UX

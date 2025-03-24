@@ -51,19 +51,17 @@ export const BlogBoxDummyData = [
   },
   {
     id: "8",
-    name: "Olivia Martinez",
-    title: "Django REST Framework",
-    description:
-      "Cách xây dựng API RESTful với Django và Django REST Framework.",
-    image: "Image/p2.png",
+    name: "Duckilot",
+    title: "RAG, AI agent & AI Agentic",
+    description: "Lý thuyết tổng quan về RAG, AI agent & AI Agentic",
+    image: "blog/aiagent.jpg",
   },
   {
     id: "9",
-    name: "Daniel Thompson",
-    title: "Machine Learning với Python",
-    description:
-      "Giới thiệu các thư viện phổ biến như Scikit-learn, TensorFlow và PyTorch.",
-    image: "Image/p2.png",
+    name: "Duckilot",
+    title: "Những điều cần biết về UX/UI",
+    description: "Các khái niệm và luật trong UX/UI",
+    image: "blog/UXUI.webp",
   },
   {
     id: "10",
