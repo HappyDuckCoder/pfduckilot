@@ -19,6 +19,7 @@ Ví dụ: "Lan mong muốn quản lý chiến dịch quảng cáo hiệu quả, 
 Động cơ và hành vi: Các hành động thường ngày, cách thức tiếp cận thông tin và công nghệ.
 Ví dụ: "Luôn tìm kiếm các công cụ hỗ trợ làm việc hiệu quả trên điện thoại."
 
+Thu thập dữ liệu:
 Khó khăn và pain points: Những trở ngại, vấn đề mà họ gặp phải trong quá trình sử dụng sản phẩm hiện có.
 Ví dụ: "Không hài lòng với giao diện phức tạp của phần mềm hiện tại."
 
@@ -26,6 +27,7 @@ Thông tin tâm lý: Tâm trạng, thái độ, giá trị và sở thích cá n
 Ví dụ: "Lan đề cao sự tiện lợi và giao diện trực quan trong thiết kế."
 
 3. Lợi ích khi sử dụng Persona trong thiết kế UX
+
 Hiểu rõ đối tượng người dùng:
 Persona giúp thiết kế và phát triển sản phẩm dựa trên nhu cầu thực tế của người dùng, từ đó tạo ra giải pháp phù hợp và hiệu quả.
 
@@ -36,7 +38,6 @@ Giao tiếp hiệu quả trong nhóm:
 Persona giúp toàn bộ nhóm phát triển hiểu được “ai” là người dùng mục tiêu, từ đó thống nhất cách tiếp cận và chiến lược phát triển sản phẩm.
 
 4. Cách xây dựng Persona
-Thu thập dữ liệu:
 
 Sử dụng khảo sát, phỏng vấn, phân tích hành vi sử dụng sản phẩm hiện tại.
 

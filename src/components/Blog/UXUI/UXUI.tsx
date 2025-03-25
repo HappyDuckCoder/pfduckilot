@@ -4,6 +4,8 @@ import PersonaPart2 from "./PersonaPart2";
 import PersonaPart3 from "./PersonaPart3";
 import PersonaPart4 from "./PersonaPart4";
 import PersonaPart5 from "./PersonaPart5";
+import YeuToTuongPhan from "./YeuToTuongPhan";
+import ListComp from "./ListComp";
 
 const blogContent = [
   {
@@ -79,6 +81,76 @@ const blogContent = [
         content: (
           <>
             <PersonaPart5 />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Quy tắc tương phản",
+    sections: [
+      {
+        heading: "1. Tương phản la gì?",
+        content: (
+          <>
+            <p>
+              <strong>Tương phản (Contrast)</strong> là sự khác biệt rõ ràng
+              giữa các yếu tố trong thiết kế, giúp phân biệt chúng với nhau.
+              Điều này giúp người dùng dễ dàng nhận diện nội dung quan trọng và
+              tạo ra một bố cục trực quan, dễ đọc.
+            </p>
+            <ul>
+              {[
+                "Ví dụ:",
+                "Chữ trắng trên nền đen dễ đọc hơn chữ xám nhạt trên nền trắng.",
+                'Nút "Mua ngay" màu đỏ trên nền trắng sẽ thu hút người dùng hơn.',
+                "Tiêu đề lớn, đậm giúp phân biệt với nội dung văn bản nhỏ hơn.",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  {index !== 0 && <span className="mr-2 text-lg">•</span>}
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+          </>
+        ),
+      },
+      {
+        heading: "Các yếu tố của tương phản trong UI/UX",
+        content: (
+          <>
+            <YeuToTuongPhan />
+          </>
+        ),
+      },
+      {
+        heading: "Khi nào nên sử dụng tương phản?",
+        content: (
+          <>
+            <ListComp
+              header=""
+              list={[
+                "Khi muốn thu hút sự chú ý đến một yếu tố quan trọng (ví dụ: CTA - Call to Action).",
+                "Khi cần phân cấp nội dung rõ ràng (ví dụ: tiêu đề lớn, nội dung nhỏ hơn).",
+                "Khi muốn cải thiện khả năng đọc và truy cập nội dung.",
+                "Khi muốn tạo cảm giác trực quan, hiện đại và chuyên nghiệp cho giao diện.",
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        heading: "Một số lỗi phổ biến khi sử dụng tương phản",
+        content: (
+          <>
+            <ListComp
+              header=""
+              list={[
+                "Dùng màu sắc có độ tương phản quá thấp, khiến nội dung khó đọc.",
+                "Quá nhiều yếu tố nổi bật cùng lúc, làm mất đi điểm nhấn chính.",
+                "Không kiểm tra tỷ lệ tương phản theo tiêu chuẩn WCAG (Web Content Accessibility Guidelines).",
+              ]}
+            />
           </>
         ),
       },
