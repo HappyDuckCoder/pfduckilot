@@ -6,13 +6,15 @@ import PersonaPart4 from "./PersonaPart4";
 import PersonaPart5 from "./PersonaPart5";
 import YeuToTuongPhan from "./YeuToTuongPhan";
 import ListComp from "./ListComp";
+import CacLoaiCanhChinh from "./CacLoaiCanhChinh";
+import NguyenTacCanChinh from "./NguyenTacCanChinh";
 
 const blogContent = [
   {
     title: "UX và UI là gì?",
     sections: [
       {
-        heading: "1. UX (User Experience - Trải nghiệm người dùng)",
+        heading: "UX (User Experience - Trải nghiệm người dùng)",
         content: (
           <>
             <p>
@@ -24,7 +26,7 @@ const blogContent = [
         ),
       },
       {
-        heading: "2. UI (User Interface - Giao diện người dùng)",
+        heading: "UI (User Interface - Giao diện người dùng)",
         content: (
           <>
             <p>
@@ -90,7 +92,7 @@ const blogContent = [
     title: "Quy tắc tương phản",
     sections: [
       {
-        heading: "1. Tương phản la gì?",
+        heading: "Tương phản la gì?",
         content: (
           <>
             <p>
@@ -149,6 +151,68 @@ const blogContent = [
                 "Dùng màu sắc có độ tương phản quá thấp, khiến nội dung khó đọc.",
                 "Quá nhiều yếu tố nổi bật cùng lúc, làm mất đi điểm nhấn chính.",
                 "Không kiểm tra tỷ lệ tương phản theo tiêu chuẩn WCAG (Web Content Accessibility Guidelines).",
+              ]}
+            />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Quy tắc căn chỉnh",
+    sections: [
+      {
+        heading: "Căn chỉnh la gì?",
+        content: (
+          <>
+            <p>
+              Căn chỉnh là cách các yếu tố trong thiết kế được sắp xếp theo một
+              quy luật nhất định để tạo sự gọn gàng, nhất quán và dễ nhìn.
+            </p>
+            <ListComp
+              header="Tại sao căn chỉnh quan trọng?"
+              list={[
+                "Giúp giao diện trông gọn gàng, chuyên nghiệp hơn.",
+                "Tạo cảm giác trật tự, giúp người dùng dễ theo dõi nội dung.",
+                "Hỗ trợ UX tốt hơn bằng cách dẫn mắt người dùng đến nội dung quan trọng.",
+              ]}
+            />
+            <ListComp
+              header="Ví dụ về căn chỉnh tốt và kém:"
+              list={[
+                "✅ Căn chỉnh tốt: Các phần tử được sắp xếp theo lưới (grid), tiêu đề và nội dung thẳng hàng.",
+                "❌ Căn chỉnh kém: Nút bấm, văn bản và hình ảnh bị lệch nhau, gây rối mắt.",
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        heading: "Các loại căn chỉnh trong UI/UX",
+        content: (
+          <>
+            <CacLoaiCanhChinh />
+          </>
+        ),
+      },
+      {
+        heading: "Các nguyên tắc quan trọng khi căn chỉnh",
+        content: (
+          <>
+            <NguyenTacCanChinh />
+          </>
+        ),
+      },
+      {
+        heading: "Sai lầm phổ biến khi căn chỉnh UI",
+        content: (
+          <>
+            <ListComp
+              header=""
+              list={[
+                "Thiếu nhất quán: Một số phần tử căn trái, một số căn giữa làm bố cục bị lộn xộn.",
+                "Không dùng hệ thống lưới: Dễ làm thiết kế mất cân bằng, khó kiểm soát bố cục.",
+                "Không kiểm tra khoảng cách: Nếu khoảng cách giữa các yếu tố không đồng đều, thiết kế sẽ trông rối mắt.",
               ]}
             />
           </>

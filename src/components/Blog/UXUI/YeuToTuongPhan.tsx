@@ -59,7 +59,7 @@ const YeuToTuongPhan = () => {
   ];
 
   return (
-    <div className=" p-4">
+    <div className="p-4">
       <ul className="space-y-6">
         {contrastElements.map((item, index) => (
           <li key={index} className="p-4 border rounded-lg shadow-md">
