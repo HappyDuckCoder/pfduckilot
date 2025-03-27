@@ -230,7 +230,9 @@ Giúp mắt người dùng di chuyển theo đúng hướng mong muốn.
 
 E. Khoảng cách
 1. Khoảng cách (Spacing) là gì?
+
 Khoảng cách là khoảng trống giữa các phần tử trên giao diện, bao gồm:
+
 ✅ Khoảng cách giữa chữ và dòng (Line Height).
 ✅ Khoảng cách giữa các đoạn văn (Paragraph Spacing).
 ✅ Khoảng cách giữa các thành phần giao diện (Padding & Margin).

@@ -8,6 +8,8 @@ import YeuToTuongPhan from "./YeuToTuongPhan";
 import ListComp from "./ListComp";
 import CacLoaiCanhChinh from "./CacLoaiCanhChinh";
 import NguyenTacCanChinh from "./NguyenTacCanChinh";
+import SpacingGuidelines from "./CacLoaiKhoangCach";
+import SpacingRules from "./SpacingRule";
 
 const blogContent = [
   {
@@ -213,6 +215,72 @@ const blogContent = [
                 "Thiếu nhất quán: Một số phần tử căn trái, một số căn giữa làm bố cục bị lộn xộn.",
                 "Không dùng hệ thống lưới: Dễ làm thiết kế mất cân bằng, khó kiểm soát bố cục.",
                 "Không kiểm tra khoảng cách: Nếu khoảng cách giữa các yếu tố không đồng đều, thiết kế sẽ trông rối mắt.",
+              ]}
+            />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Khoảng cách",
+    sections: [
+      {
+        heading: "Khoảng cách (Spacing) là gì?",
+        content: (
+          <>
+            <p>
+              Khoảng cách là khoảng trống giữa các phần tử trên giao diện, bao
+              gồm:
+            </p>
+            <ListComp
+              header=""
+              list={[
+                "Khoảng cách giữa chữ và dòng (Line Height).",
+                "Khoảng cách giữa các đoạn văn (Paragraph Spacing).",
+                "Khoảng cách giữa các thành phần giao diện (Padding & Margin).",
+                "Khoảng cách giữa các phần lớn trong bố cục (White Space).",
+              ]}
+            />
+            <ListComp
+              header="Tại sao khoảng cách quan trọng?"
+              list={[
+                "Giúp nội dung dễ đọc và dễ hiểu hơn.",
+                "Tạo sự phân cấp trực quan rõ ràng.",
+                "Giúp giao diện không bị rối mắt, mang lại cảm giác chuyên nghiệp.",
+                "Hướng dẫn mắt người dùng di chuyển theo đúng luồng nội dung.",
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        heading: "Các loại khoảng cách trong UI/UX",
+        content: (
+          <>
+            <SpacingGuidelines />
+          </>
+        ),
+      },
+      {
+        heading: "Quy tắc sử dụng khoảng cách hiệu quả",
+        content: (
+          <>
+            <SpacingRules />
+          </>
+        ),
+      },
+      {
+        heading: "Sai lầm phổ biến khi sử dụng khoảng cách",
+        content: (
+          <>
+            <ListComp
+              header=""
+              list={[
+                "Khoảng cách quá chật chội: Giao diện rối mắt, khó sử dụng.",
+                "Khoảng cách quá rộng: Giao diện bị loãng, người dùng mất tập trung.",
+                "Không đồng nhất: Các phần tử có khoảng cách không nhất quán gây mất cân bằng.",
+                "Nhồi nhét quá nhiều nội dung: Thiếu khoảng trắng làm người dùng ngợp.",
               ]}
             />
           </>
