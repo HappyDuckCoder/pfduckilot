@@ -10,6 +10,9 @@ import CacLoaiCanhChinh from "./CacLoaiCanhChinh";
 import NguyenTacCanChinh from "./NguyenTacCanChinh";
 import SpacingGuidelines from "./CacLoaiKhoangCach";
 import SpacingRules from "./SpacingRule";
+import CacLoaiTinhDongNhat from "./CacLoaiDongNhat";
+import QuyTacGiupDuyTriTinhDongNhat from "./LuatDongNhat";
+import LoiDongNhat from "./LoiDongNhat";
 
 const blogContent = [
   {
@@ -283,6 +286,62 @@ const blogContent = [
                 "Nhồi nhét quá nhiều nội dung: Thiếu khoảng trắng làm người dùng ngợp.",
               ]}
             />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Tính đồng nhất",
+    sections: [
+      {
+        heading: "Tính đồng nhất (Consistency) là gì?",
+        content: (
+          <>
+            <p>
+              Tính đồng nhất là việc giữ cho các yếu tố thiết kế có cùng kiểu
+              dáng, quy tắc và hành vi trong toàn bộ sản phẩm.
+            </p>
+            <ListComp
+              header="Tại sao tính đồng nhất quan trọng?"
+              list={[
+                "Giúp người dùng dễ học cách sử dụng.",
+                "Cải thiện trải nghiệm người dùng (UX) bằng cách giảm sự nhầm lẫn.",
+                "Làm cho thương hiệu trông chuyên nghiệp và đáng tin cậy hơn.",
+                "Tiết kiệm thời gian thiết kế và phát triển do có hệ thống rõ ràng.",
+              ]}
+            />
+            <ListComp
+              header="Ví dụ về tính đồng nhất tốt và kém:"
+              list={[
+                "✅ Tốt: Các nút có cùng màu sắc, kích thước và kiểu chữ trên toàn bộ ứng dụng.",
+                "❌ Kém: Mỗi trang web sử dụng một kiểu font, màu khác nhau gây rối mắt.",
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        heading: "Các loại tính đồng nhất trong UI/UX",
+        content: (
+          <>
+            <CacLoaiTinhDongNhat />
+          </>
+        ),
+      },
+      {
+        heading: "Quy tắc giúp duy trì tính đồng nhất trong UI/UX",
+        content: (
+          <>
+            <QuyTacGiupDuyTriTinhDongNhat />
+          </>
+        ),
+      },
+      {
+        heading: "Quy tắc giúp duy trì tính đồng nhất trong UI/UX",
+        content: (
+          <>
+            <LoiDongNhat />
           </>
         ),
       },
