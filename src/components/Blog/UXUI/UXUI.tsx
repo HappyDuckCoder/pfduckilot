@@ -13,6 +13,7 @@ import SpacingRules from "./SpacingRule";
 import CacLoaiTinhDongNhat from "./CacLoaiDongNhat";
 import QuyTacGiupDuyTriTinhDongNhat from "./LuatDongNhat";
 import LoiDongNhat from "./LoiDongNhat";
+import ColorTheoryGuide from "./ColorTheory";
 
 const blogContent = [
   {
@@ -342,6 +343,19 @@ const blogContent = [
         content: (
           <>
             <LoiDongNhat />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Lý thuyết màu sắc",
+    sections: [
+      {
+        heading: "",
+        content: (
+          <>
+            <ColorTheoryGuide />
           </>
         ),
       },
