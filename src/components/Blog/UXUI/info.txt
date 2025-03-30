@@ -709,10 +709,6 @@ Google Fonts là thư viện font miễn phí, tối ưu cho web & mobile.
 1️⃣ Chọn font từ Google Fonts.
 2️⃣ Copy link vào <head> của HTML.
 3️⃣ Sử dụng trong CSS:
-
-css
-Copy
-Edit
 body {
   font-family: 'Roboto', sans-serif;
 }

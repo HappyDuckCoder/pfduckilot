@@ -14,6 +14,8 @@ import CacLoaiTinhDongNhat from "./CacLoaiDongNhat";
 import QuyTacGiupDuyTriTinhDongNhat from "./LuatDongNhat";
 import LoiDongNhat from "./LoiDongNhat";
 import ColorTheoryGuide from "./ColorTheory";
+import TypographyGuide from "./Typography";
+import UiAnimationGuide from "./UIAnimation";
 
 const blogContent = [
   {
@@ -356,6 +358,32 @@ const blogContent = [
         content: (
           <>
             <ColorTheoryGuide />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Typography",
+    sections: [
+      {
+        heading: "",
+        content: (
+          <>
+            <TypographyGuide />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Typography",
+    sections: [
+      {
+        heading: "",
+        content: (
+          <>
+            <UiAnimationGuide />
           </>
         ),
       },
