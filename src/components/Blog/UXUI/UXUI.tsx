@@ -377,7 +377,7 @@ const blogContent = [
     ],
   },
   {
-    title: "Typography",
+    title: "UIAnimation",
     sections: [
       {
         heading: "",
