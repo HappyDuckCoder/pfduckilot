@@ -81,7 +81,7 @@ export const projects = [
       "A web application for managing patient records, scheduling appointments, and handling payments seamlessly using Stripe integration.",
     techStack: ["Next.js", "MongoDB", "Clerk"],
     image: "/Image/p1.png",
-    link: "https://patient-git-main-happyduckcoders-projects.vercel.app/",
+    link: "https://patienthd.vercel.app",
   },
   {
     id: 2,
@@ -90,7 +90,7 @@ export const projects = [
       "A fun project that generates personalized messages and images using OpenAI API to celebrate International Women's Day on March 8th.",
     techStack: ["Motion-framer", "Groq API", "Liveblocks"],
     image: "/Image/p2.png",
-    link: "https://83test-git-featrealtime-happyduckcoders-projects.vercel.app/",
+    link: "https://celebrate83.vercel.app/",
   },
   {
     id: 3,
@@ -99,7 +99,7 @@ export const projects = [
       "A powerful web application that allows users to search for real-time information efficiently. Features include advanced filtering, instant search results, and optimized performance for large datasets.",
     techStack: ["Taivily", "Duckduckgo", "API service", "Google API"],
     image: "/Image/p3.png",
-    link: "https://searching-git-main-happyduckcoders-projects.vercel.app/",
+    link: "https://searching-delta.vercel.app/",
   },
   {
     id: 4,
