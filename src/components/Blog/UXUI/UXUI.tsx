@@ -16,6 +16,8 @@ import LoiDongNhat from "./LoiDongNhat";
 import ColorTheoryGuide from "./ColorTheory";
 import TypographyGuide from "./Typography";
 import UiAnimationGuide from "./UIAnimation";
+import HickLaw from "./HickLaw";
+import FittsLaw from "./FittsLaw";
 
 const blogContent = [
   {
@@ -384,6 +386,32 @@ const blogContent = [
         content: (
           <>
             <UiAnimationGuide />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Định luật Hick Law",
+    sections: [
+      {
+        heading: "",
+        content: (
+          <>
+            <HickLaw />
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Định luật Fitts Law",
+    sections: [
+      {
+        heading: "",
+        content: (
+          <>
+            <FittsLaw />
           </>
         ),
       },
