@@ -65,11 +65,11 @@ export const BlogBoxDummyData = [
   },
   {
     id: "10",
-    name: "Emma Anderson",
-    title: "Kubernetes cho người mới bắt đầu",
+    name: "duckilot",
+    title: "AI Personality",
     description:
-      "Tìm hiểu cách Kubernetes giúp quản lý container và triển khai ứng dụng hiệu quả.",
-    image: "/Image/p2.png",
+      "Tìm hiểu về AI tự động hóa là gì và quy trình xây dựng 1 ví dụ cơ bản",
+    image: "/blog/AIPersonal.webp",
   },
 ];
 
