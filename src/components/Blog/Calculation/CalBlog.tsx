@@ -13,7 +13,7 @@ type CodeBlockProps = {
 
 const CodeBlockCal = ({ codeData }: { codeData: CodeBlockProps }) => {
   return (
-    <div className="max-w-3xl mx-auto w-full">
+    <div className="mx-auto w-full">
       <CodeBlock {...codeData} />
     </div>
   );

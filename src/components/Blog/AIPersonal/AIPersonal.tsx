@@ -1,5 +1,7 @@
 import SplitText from "@/components/ui/SplitText";
 import React, { useState } from "react";
+import CodeBlockCal from "../Calculation/CalBlog";
+import { codedataAI } from "./codedatAI";
 
 // Định nghĩa kiểu dữ liệu cho mỗi mục trong quy trình AI cá nhân hóa
 type ProcessStep = {
@@ -247,6 +249,14 @@ const AIPersonal: React.FC = () => {
             </p>
           </div>
         )}
+
+        <div className="mt-8">
+          <SplitText
+            text="Một ví dụ cơ bản về đưa ra một lịch tập cá nhân hóa"
+            className="text-3xl font-bold text-white mb-6 mt-20"
+          />
+          <CodeBlockCal codeData={codedataAI} />
+        </div>
       </div>
     </div>
   );
