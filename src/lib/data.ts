@@ -71,6 +71,13 @@ export const BlogBoxDummyData = [
       "Tìm hiểu về AI tự động hóa là gì và quy trình xây dựng 1 ví dụ cơ bản",
     image: "/blog/AIPersonal.webp",
   },
+  {
+    id: "11",
+    name: "duckilot",
+    title: "Crawl data",
+    description: "Những điều kì thú về crawl data",
+    image: "/blog/crawl-data.jpg",
+  },
 ];
 
 export const projects = [

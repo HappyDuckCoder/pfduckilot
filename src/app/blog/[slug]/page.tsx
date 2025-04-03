@@ -13,6 +13,7 @@ import Ollama from "@/components/Blog/Ollama/Ollama";
 import AIAgent from "@/components/Blog/AIAgent/AIAgent";
 import UXUI from "@/components/Blog/UXUI/UXUI";
 import AIPersonal from "@/components/Blog/AIPersonal/AIPersonal";
+import WebScrapingArticle from "@/components/Blog/Crawl/Crawl";
 // import { metadataBlog } from "@/lib/metadata";
 
 // Định nghĩa danh sách component tương ứng với từng slug
@@ -27,6 +28,7 @@ const blogComponents: Record<string, React.FC> = {
   "8": AIAgent,
   "9": UXUI,
   "10": AIPersonal,
+  "11": WebScrapingArticle,
 };
 
 const SingleBlog = () => {
