@@ -78,6 +78,13 @@ export const BlogBoxDummyData = [
     description: "Những điều kì thú về crawl data",
     image: "/blog/crawl-data.jpg",
   },
+  {
+    id: "12",
+    name: "duckilot",
+    title: "Crawl data with BeautifulSoup",
+    description: "Cách crawl dữ liệu với BeautifulSoup",
+    image: "/blog/beautifulSoup.jpg",
+  },
 ];
 
 export const projects = [
