@@ -85,6 +85,13 @@ export const BlogBoxDummyData = [
     description: "Cách crawl dữ liệu với BeautifulSoup",
     image: "/blog/beautifulSoup.jpg",
   },
+  {
+    id: "13",
+    name: "duckilot",
+    title: "TensorAI",
+    description: "TensorAI và những gì hay hay về nó",
+    image: "/blog/OIP.jpg",
+  },
 ];
 
 export const projects = [
