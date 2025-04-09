@@ -16,6 +16,7 @@ import AIPersonal from "@/components/Blog/AIPersonal/AIPersonal";
 import WebScrapingArticle from "@/components/Blog/Crawl/Crawl";
 import BeautifulSoupDocumentation from "@/components/Blog/BeautifulSoup/BeautifulSoup";
 import TensorArtInfo from "@/components/Blog/TensorAI/TensorAI";
+import PM from "@/components/Blog/PM/PM";
 // import { metadataBlog } from "@/lib/metadata";
 
 // Định nghĩa danh sách component tương ứng với từng slug
@@ -33,6 +34,7 @@ const blogComponents: Record<string, React.FC> = {
   "11": WebScrapingArticle,
   "12": BeautifulSoupDocumentation,
   "13": TensorArtInfo,
+  "14": PM,
 };
 
 const SingleBlog = () => {

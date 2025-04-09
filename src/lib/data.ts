@@ -92,6 +92,14 @@ export const BlogBoxDummyData = [
     description: "TensorAI và những gì hay hay về nó",
     image: "/blog/OIP.jpg",
   },
+  {
+    id: "14",
+    name: "duckilot",
+    title: "Project Manager",
+    description:
+      "Các phương pháp và công cụ cơ bản khi làm một project manager",
+    image: "/blog/PM.jpg",
+  },
 ];
 
 export const projects = [
