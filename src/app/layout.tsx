@@ -6,8 +6,9 @@ import FloatingNavbar from "@/components/ui/FloatingNavbar";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Duckilot",
-  description: "Duckilot Portfolio and Blog",
+  title: "HappyDuckCoder | AI Engineer · Full-Stack · Tech Lead",
+  description:
+    "HappyDuckCoder (Duckilot) — Portfolio and Blog. AI Engineer, Full-Stack Developer, Tech Lead. Computer Vision & intelligent applications.",
 };
 
 export default function RootLayout({

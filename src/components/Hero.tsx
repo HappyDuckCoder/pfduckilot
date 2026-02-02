@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import IntroHeader from "./IntroHeader";
 import Portrait from "./Portrait";
 import ScrollForMore from "./ScrollForMore";
-import LottieAnimation from "./Loti";
+
+const LottieAnimation = dynamic(() => import("./Loti"), { ssr: false });
 
 const Hero = () => {
   const handleScrollToAbout = () => {
@@ -30,16 +32,15 @@ const Hero = () => {
               Welcome to my world!
             </h2>
             <p className="text-gray-600 mt-3 text-base sm:text-lg leading-relaxed max-w-md">
-              As a passionate{" "}
+              I'm an{" "}
               <span className="font-semibold text-gray-800">
-                Fullstack Developer
+                AI Engineer | Full-Stack Developer | Tech Lead
               </span>
-              , I specialize in building scalable web applications. With
-              expertise in{" "}
+              . I specialize in building intelligent applications with{" "}
               <span className="font-semibold text-gray-800">
-                Next.js, Prisma, and MongoDB
+                React, Node.js, Python & Computer Vision
               </span>
-              , I craft seamless user experiences and robust backend solutions.
+              —crafting seamless experiences from frontend to AI solutions.
             </p>
             <div className="mt-5">
               <ScrollForMore onClick={handleScrollToAbout} />

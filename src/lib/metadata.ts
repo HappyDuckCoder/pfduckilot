@@ -1,4 +1,5 @@
 export const metadataBlog = {
-  title: "Duck - Bloger",
-  description: "Duck Bloger",
+  title: "HappyDuckCoder - Blog",
+  description:
+    "HappyDuckCoder blog — AI, Computer Vision, Full-Stack, and more.",
 };

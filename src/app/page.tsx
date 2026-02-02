@@ -2,14 +2,17 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import MyProject from "@/components/MyProject";
 import NoiseBackground from "@/components/NoiseBackground";
 import React, { useState, useEffect } from "react";
-import LoadingScreen from "@/components/LoadingScreen";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+
+const LoadingScreen = dynamic(() => import("@/components/LoadingScreen"), {
+  ssr: false,
+});
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,35 +42,7 @@ const Home = () => {
         <LoadingScreen />
       </motion.div>
 
-      {/* Nút "View My Blog" với hiệu ứng mũi tên */}
-      {!isLoading && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="fixed top-5 right-5 z-50 flex items-center gap-3 px-4 py-2 bg-zinc-700/90 rounded-full shadow-lg"
-        >
-          <Link href="/blog" aria-label="View My Blog">
-            <motion.div
-              animate={{ x: [0, 5, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-            >
-              <FaArrowRight className="text-gray-200 text-lg" />
-            </motion.div>
-          </Link>
-
-          <Link
-            href="/blog"
-            className="text-gray-200 text-lg font-medium hover:underline hidden sm:block"
-          >
-            View My Blog
-          </Link>
-        </motion.div>
-      )}
+      {/* Blog link hidden — under development */}
 
       {/* Nội dung chính */}
       {!isLoading && (
@@ -87,6 +62,9 @@ const Home = () => {
             <MyProject />
           </NoiseBackground>
           <NoiseBackground mode="dark" intensity={0.1}>
+            <Experience />
+          </NoiseBackground>
+          <NoiseBackground mode="light" intensity={0.1}>
             <Contact />
           </NoiseBackground>
         </motion.div>
