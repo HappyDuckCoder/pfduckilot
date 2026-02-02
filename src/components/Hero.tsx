@@ -32,7 +32,7 @@ const Hero = () => {
               Welcome to my world!
             </h2>
             <p className="text-gray-600 mt-3 text-base sm:text-lg leading-relaxed max-w-md">
-              I'm an{" "}
+              I&apos;m an{" "}
               <span className="font-semibold text-gray-800">
                 AI Engineer | Full-Stack Developer | Tech Lead
               </span>

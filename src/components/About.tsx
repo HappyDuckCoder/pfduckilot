@@ -28,7 +28,7 @@ const About = () => {
           <p className="text-gray-400 text-lg mt-4 max-w-2xl">
             I am an <span className="font-semibold">AI Engineer</span>,{" "}
             <span className="font-semibold">Full-Stack Developer</span>, and{" "}
-            <span className="font-semibold">Tech Lead</span>. I'm currently
+            <span className="font-semibold">Tech Lead</span>. I&apos;m currently
             learning <span className="font-semibold">AI & Computer Vision</span>{" "}
             and passionate about building intelligent applications that solve
             real-world problems.
