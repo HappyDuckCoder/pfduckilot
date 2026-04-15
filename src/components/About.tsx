@@ -29,55 +29,106 @@ const About = () => {
             I am an <span className="font-semibold">AI Engineer</span>,{" "}
             <span className="font-semibold">Full-Stack Developer</span>, and{" "}
             <span className="font-semibold">Tech Lead</span>. I&apos;m currently
-            learning <span className="font-semibold">AI & Computer Vision</span>{" "}
-            and passionate about building intelligent applications that solve
+            a third-year student at{" "}
+            <span className="font-semibold">
+              the University of Science, HCMUS
+            </span>{" "}
+            and specializing in{" "}
+            <span className="font-semibold">Computer Vision</span>. I am
+            passionate about building intelligent applications that solve
             real-world problems.
           </p>
-          <span className="block mt-4 text-gray-300 text-center">
-            <ScrollForMore onClick={handleScrollToProject} />
-          </span>
         </div>
 
         {/* Bố cục chính */}
-        <div className="mt-16 flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Image / Animation */}
           <div className="flex-1 flex justify-end">
             <Rocket />
           </div>
           {/* Description */}
-          <div className="flex-1 text-left text-gray-300 text-lg space-y-10">
-            <p>
-              I work with{" "}
-              <span className="text-white font-semibold">
-                React, JavaScript, HTML/CSS
-              </span>{" "}
-              on the frontend and{" "}
-              <span className="font-semibold">
-                Node.js, Fastify, ASP.NET, C#
-              </span>{" "}
-              on the backend to build scalable, modern applications.
-            </p>
-            <p>
-              I use{" "}
-              <span className="text-white font-semibold">
-                PostgreSQL, MongoDB, MySQL
-              </span>{" "}
-              for data storage and have experience with{" "}
-              <span className="font-semibold">Git, GitHub, Vercel, Docker</span>{" "}
-              for DevOps and deployment.
-            </p>
-            <p>
-              My main focus is{" "}
-              <span className="text-white font-semibold">
-                AI & Computer Vision
-              </span>
-              —I use{" "}
-              <span className="font-semibold">
-                Python, OpenCV, TensorFlow, PyTorch
-              </span>{" "}
-              and enjoy team leadership and project planning. Fun fact: I code
-              with a smile!
-            </p>
+          <div className="flex-1 text-left text-gray-300 text-lg space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Technical Skills
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1 rounded-full bg-slate-700/60 text-slate-100 text-sm font-medium">
+                  React
+                </span>
+                <span className="px-3 py-1 rounded-full bg-sky-700/50 text-sky-100 text-sm font-medium">
+                  JavaScript
+                </span>
+                <span className="px-3 py-1 rounded-full bg-indigo-700/50 text-indigo-100 text-sm font-medium">
+                  HTML/CSS
+                </span>
+                <span className="px-3 py-1 rounded-full bg-cyan-700/50 text-cyan-100 text-sm font-medium">
+                  Node.js
+                </span>
+                <span className="px-3 py-1 rounded-full bg-teal-700/50 text-teal-100 text-sm font-medium">
+                  Fastify
+                </span>
+                <span className="px-3 py-1 rounded-full bg-violet-700/50 text-violet-100 text-sm font-medium">
+                  ASP.NET
+                </span>
+                <span className="px-3 py-1 rounded-full bg-purple-700/50 text-purple-100 text-sm font-medium">
+                  C#
+                </span>
+                <span className="px-3 py-1 rounded-full bg-emerald-700/50 text-emerald-100 text-sm font-medium">
+                  PostgreSQL
+                </span>
+                <span className="px-3 py-1 rounded-full bg-green-700/50 text-green-100 text-sm font-medium">
+                  MongoDB
+                </span>
+                <span className="px-3 py-1 rounded-full bg-lime-700/50 text-lime-100 text-sm font-medium">
+                  MySQL
+                </span>
+                <span className="px-3 py-1 rounded-full bg-rose-700/50 text-rose-100 text-sm font-medium">
+                  Git & GitHub
+                </span>
+                <span className="px-3 py-1 rounded-full bg-amber-700/50 text-amber-100 text-sm font-medium">
+                  Docker
+                </span>
+                <span className="px-3 py-1 rounded-full bg-orange-700/50 text-orange-100 text-sm font-medium">
+                  Vercel
+                </span>
+                <span className="px-3 py-1 rounded-full bg-fuchsia-700/50 text-fuchsia-100 text-sm font-medium">
+                  Python
+                </span>
+                <span className="px-3 py-1 rounded-full bg-blue-700/50 text-blue-100 text-sm font-medium">
+                  OpenCV
+                </span>
+                <span className="px-3 py-1 rounded-full bg-pink-700/50 text-pink-100 text-sm font-medium">
+                  TensorFlow
+                </span>
+                <span className="px-3 py-1 rounded-full bg-red-700/50 text-red-100 text-sm font-medium">
+                  PyTorch
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Soft Skills
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1 rounded-full bg-slate-700/60 text-slate-100 text-sm font-medium">
+                  Team Leadership
+                </span>
+                <span className="px-3 py-1 rounded-full bg-blue-700/50 text-blue-100 text-sm font-medium">
+                  Project Planning
+                </span>
+                <span className="px-3 py-1 rounded-full bg-indigo-700/50 text-indigo-100 text-sm font-medium">
+                  Problem Solving
+                </span>
+                <span className="px-3 py-1 rounded-full bg-violet-700/50 text-violet-100 text-sm font-medium">
+                  Communication
+                </span>
+                <span className="px-3 py-1 rounded-full bg-emerald-700/50 text-emerald-100 text-sm font-medium">
+                  Collaboration
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 

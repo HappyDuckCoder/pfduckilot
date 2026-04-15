@@ -6,7 +6,30 @@ import SplitText from "./ui/SplitText";
 import { projects } from "@/lib/data";
 
 const MyProject = () => {
-  const [featured, ...rest] = projects;
+  const projectOrder = [
+    "Video Summarization (BiLSTM Multimodal)",
+    "AI-Holyann (Holyann Explore)",
+    "IOTFRIDGE",
+    "TourismTogether Frontend",
+    "TourismTogether Backend",
+    "AIRushHour (RushRelic)",
+  ];
+
+  const visibleProjects = [...projects]
+    .sort((a, b) => {
+      const aIndex = projectOrder.indexOf(a.title);
+      const bIndex = projectOrder.indexOf(b.title);
+
+      const normalizedAIndex = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+      const normalizedBIndex = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+
+      if (normalizedAIndex !== normalizedBIndex) {
+        return normalizedAIndex - normalizedBIndex;
+      }
+
+      return a.id - b.id;
+    })
+    .slice(0, 6);
 
   return (
     <section
@@ -27,26 +50,17 @@ const MyProject = () => {
 
       <div className="container relative z-10 mx-auto px-6 lg:px-12 max-w-vw">
         <header className="mb-14 md:mb-16">
-          <p className="text-gray-500 text-sm uppercase tracking-[0.2em] mb-3">
-            Portfolio
-          </p>
           <SplitText
             text="Projects"
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-darkColor tracking-tight"
           />
           <p className="mt-4 text-gray-600 text-lg max-w-xl">
-            A selection of work — from web apps to AI and games.
+            A selection of works — from web apps to AI and games.
           </p>
         </header>
 
-        {/* Featured + grid — Ceremony “New Arrivals” style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-          {featured && (
-            <div className="md:col-span-2 lg:col-span-2">
-              <Project project={featured} featured />
-            </div>
-          )}
-          {rest.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {visibleProjects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
         </div>

@@ -23,12 +23,12 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-center">
           <div className="flex flex-col items-center md:items-start">
             <Portrait width={200} height={200} />
-            <p className="text-gray-600 mt-3 font-bold text-lg sm:text-xl">
-              Duckilot
+            <p className="text-gray-600 mt-3 font-bold text-lg sm:text-xl mx-auto">
+              HappyDuckCoder
             </p>
           </div>
           <div className="text-center md:text-left flex-1 p-3">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-700">
+            <h2 className="text-3xl sm:text-2xl font-semibold text-gray-700">
               Welcome to my world!
             </h2>
             <p className="text-gray-600 mt-3 text-base sm:text-lg leading-relaxed max-w-md">
