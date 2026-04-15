@@ -148,9 +148,8 @@ export const projects: ProjectItem[] = [
       "I built an interactive flow that combines templates, prompt processing, and real-time collaboration touches for sharing.",
     keyFeatures: [
       "Dynamic message generation",
-      "Template-based visual output",
       "Real-time interaction components",
-      "Responsive and mobile-first design",
+      "Collaborative sharing functionality",
     ],
     highlights: [
       "Integrated Groq API for fast generation",
@@ -169,8 +168,9 @@ export const projects: ProjectItem[] = [
     achievements: [
       "Delivered a production-ready celebratory web experience",
       "Improved personalization quality with prompt-based generation",
+      "Supported around 20 rooms with up to 300 concurrent online users.",
     ],
-    teamSize: 1,
+    teamSize: 5,
   },
   {
     id: 2,
@@ -214,7 +214,7 @@ export const projects: ProjectItem[] = [
       "Completed a functional AI puzzle game prototype",
       "Demonstrated heuristic search in an interactive game setting",
     ],
-    teamSize: 1,
+    teamSize: 4,
   },
   {
     id: 3,
@@ -258,7 +258,7 @@ export const projects: ProjectItem[] = [
       "Stabilized cross-device communication behavior",
       "Reduced maintenance effort through modular handlers",
     ],
-    teamSize: 2,
+    teamSize: 3,
   },
   {
     id: 4,
@@ -302,7 +302,7 @@ export const projects: ProjectItem[] = [
       "Shipped a scalable multi-role platform architecture",
       "Improved navigational clarity for all user segments",
     ],
-    teamSize: 5,
+    teamSize: 3,
   },
   {
     id: 5,
@@ -346,11 +346,11 @@ export const projects: ProjectItem[] = [
       "Produced coherent summary videos with preserved audio",
       "Improved summary quality with shot-based diversity selection",
     ],
-    teamSize: 3,
+    teamSize: 2,
   },
   {
     id: 6,
-    title: "TourismTogether Frontend",
+    title: "TourismTogether",
     description:
       "A Next.js frontend for a social travel platform covering trips, destinations, diaries, forum, and safety features.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
@@ -455,8 +455,8 @@ export const experienceTimeline: ExperienceItem[] = [
     icon: "current",
     label: "Current",
     title: "OptimAI",
-    subtitle: "AI Engineer Intern",
-    period: "2025 - Present",
+    subtitle: "AI Engineer - Full-stack Intern",
+    period: "2026 - Present",
     status: "Active role",
     location: "Ho Chi Minh City, Vietnam",
     description:
@@ -481,7 +481,7 @@ export const experienceTimeline: ExperienceItem[] = [
     label: "Previous",
     title: "Asoft",
     subtitle: "Software Developer Intern",
-    period: "2024",
+    period: "2026",
     status: "Completed internship",
     location: "Ho Chi Minh City, Vietnam",
     description:
@@ -508,11 +508,11 @@ export const experienceAwards: AwardItem[] = [
     rank: 1,
     title: "AI Innovation Competition",
     org: "HCMUS",
-    year: "2025",
+    year: "2024",
     category: "Applied AI",
-    role: "Team Lead & AI Engineer",
+    role: "IOT Hardware Engineer",
     summary:
-      "Built an AI-powered solution focused on practical impact and real-world usability in a university innovation challenge.",
+      "Developed smart glasses for visually impaired users, supporting tasks such as hazard detection, pothole avoidance, and sharp-object alerts.",
     achievement:
       "Secured 1st place among student teams with strong technical execution and presentation.",
     image: "/experiences/highfive.jpg",
@@ -523,10 +523,10 @@ export const experienceAwards: AwardItem[] = [
     title: "SoictAI Challenge",
     org: "HCMUS",
     year: "2024",
-    category: "Machine Learning",
-    role: "ML Developer",
+    category: "AI & Application",
+    role: "AI Engineer",
     summary:
-      "Developed and optimized machine learning workflows for competitive evaluation tasks under limited time constraints.",
+      "Built an intelligent camera system to detect child abuse behaviors early and trigger timely alerts for protection.",
     achievement:
       "Reached Top 6 with a robust baseline and iterative model improvements.",
     image: "/experiences/soict.png",

@@ -1,7 +1,7 @@
 "use client";
 
 import About from "@/components/About";
-import Contact from "@/components/Contact";
+// import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import MyProject from "@/components/MyProject";
@@ -64,9 +64,9 @@ const Home = () => {
           <NoiseBackground mode="dark" intensity={0.1}>
             <Experience />
           </NoiseBackground>
-          <NoiseBackground mode="light" intensity={0.1}>
+          {/* <NoiseBackground mode="light" intensity={0.1}>
             <Contact />
-          </NoiseBackground>
+          </NoiseBackground> */}
         </motion.div>
       )}
     </main>
