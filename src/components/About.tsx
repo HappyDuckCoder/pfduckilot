@@ -6,16 +6,8 @@ import Marquee from "./ui/Marquee";
 
 const Rocket = dynamic(() => import("./Rocket"), { ssr: false });
 import SplitText from "./ui/SplitText";
-import ScrollForMore from "./ScrollForMore";
 
 const About = () => {
-  const handleScrollToProject = () => {
-    const aboutSection = document.getElementById("project-section");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="about-section" className="py-24 bg-darkBg text-white">
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl">

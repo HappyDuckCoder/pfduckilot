@@ -102,9 +102,6 @@ export const BlogBoxDummyData = [
   },
 ];
 
-const PLACEHOLDER_IMAGE = (id: number) =>
-  `https://picsum.photos/seed/${id}/800/600`;
-
 export interface ProjectItem {
   id: number;
   title: string;
