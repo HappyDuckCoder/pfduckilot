@@ -3,7 +3,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { FaBriefcase, FaBuilding, FaMapMarkerAlt, FaUniversity } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaBuilding,
+  FaMapMarkerAlt,
+  FaUniversity,
+} from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi2";
 import { experienceTimeline } from "@/lib/data";
 
@@ -36,7 +41,7 @@ const ExperienceTimeline = () => {
   return (
     <div className="relative" ref={timelineRef}>
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-4 md:gap-5 auto-rows-fr"
         variants={containerVariants}
         initial="hidden"
         animate={isTimelineInView ? "visible" : "hidden"}
@@ -50,12 +55,10 @@ const ExperienceTimeline = () => {
               className="group h-full"
               variants={itemVariants}
             >
-              <article
-                className="relative h-full overflow-hidden rounded-2xl border border-cyan-200/10 bg-white/[0.02] backdrop-blur-sm transition-all duration-500 hover:bg-white/[0.04] hover:shadow-xl hover:shadow-black/20"
-              >
+              <article className="relative h-full overflow-hidden rounded-xl border border-cyan-200/10 bg-white/[0.02] backdrop-blur-sm transition-all duration-500 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-black/20">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/[0.04] via-transparent to-transparent pointer-events-none" />
 
-                <div className="relative p-6 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0">
+                <div className="relative p-3.5 md:p-4 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg border flex items-center justify-center shrink-0 bg-cyan-400/10 border-cyan-300/20 text-cyan-200">
                       <Icon className="text-lg" />
@@ -66,30 +69,30 @@ const ExperienceTimeline = () => {
                   </div>
 
                   <div className="mt-4">
-                    <h3 className="text-xl md:text-2xl font-semibold text-lightColor leading-tight line-clamp-2 min-h-[56px]">
+                    <h3 className="text-lg md:text-xl font-semibold text-lightColor leading-tight line-clamp-2 min-h-[52px]">
                       {item.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mt-2 line-clamp-2 min-h-[40px]">
+                    <p className="text-gray-400 text-xs md:text-sm mt-1.5 line-clamp-2 min-h-[36px]">
                       {item.subtitle}
                     </p>
                   </div>
 
-                  <div className="mt-4 relative aspect-[16/9] rounded-xl overflow-hidden border border-white/10 bg-white/5">
+                  <div className="mt-2.5 relative aspect-[16/7] rounded-md overflow-hidden border border-white/10 bg-white/5">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 88vw, (max-width: 1280px) 40vw, 18vw"
                       className="object-cover opacity-80 group-hover:opacity-95 transition-all duration-500 group-hover:scale-[1.02]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                   </div>
 
-                  <p className="mt-4 text-sm text-gray-300 line-clamp-2">
+                  <p className="mt-2.5 text-xs md:text-sm text-gray-300 line-clamp-2">
                     {item.description}
                   </p>
 
-                  <div className="mt-5 pt-4 border-t border-white/10">
+                  <div className="mt-3.5 pt-2.5 border-t border-white/10">
                     <p className="text-xs uppercase tracking-[0.16em] text-cyan-200/80">
                       {item.period}
                     </p>
@@ -106,19 +109,19 @@ const ExperienceTimeline = () => {
                   </div>
                 </div>
 
-                <div className="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="h-full rounded-xl border border-cyan-200/20 bg-black/35 backdrop-blur-md p-5 flex flex-col">
+                <div className="absolute inset-0 p-3.5 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="h-full rounded-lg border border-cyan-200/20 bg-black/35 backdrop-blur-md p-3.5 flex flex-col">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-cyan-200/80">
                       Contribution
                     </p>
-                    <h4 className="mt-2 text-lg font-semibold text-white line-clamp-2">
+                    <h4 className="mt-2 text-base md:text-lg font-semibold text-white line-clamp-2">
                       {item.title}
                     </h4>
 
                     <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-cyan-200/50 to-transparent" />
 
-                    <ul className="mt-4 space-y-3 text-sm text-gray-200">
-                      {item.contribution.slice(0, 3).map((point) => (
+                    <ul className="mt-3 space-y-2 text-xs md:text-sm text-gray-200 overflow-y-auto pr-1">
+                      {item.contribution.slice(0, 4).map((point) => (
                         <li key={point} className="flex items-start gap-2">
                           <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-cyan-200/90" />
                           <span>{point}</span>

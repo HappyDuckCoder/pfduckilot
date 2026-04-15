@@ -437,6 +437,8 @@ export const experienceTimeline: ExperienceItem[] = [
       "Built AI and web-based portfolio projects with end-to-end ownership",
       "Applied Computer Vision techniques in research-oriented prototypes",
       "Collaborated in technical competitions and team engineering tasks",
+      "Designed modular components and reusable data-driven sections",
+      "Documented project workflows and technical decisions for teammates",
     ],
     highlights: [
       "Built multiple AI and web-based projects",
@@ -462,6 +464,8 @@ export const experienceTimeline: ExperienceItem[] = [
       "Integrated LLM-powered features into existing product workflows",
       "Designed prompt and API orchestration for practical use cases",
       "Improved team iteration speed through reusable implementation patterns",
+      "Implemented backend-to-frontend integration for AI outputs",
+      "Contributed to debugging, QA checks, and release stabilization",
     ],
     highlights: [
       "Integrated AI services into product workflows",
@@ -487,6 +491,8 @@ export const experienceTimeline: ExperienceItem[] = [
       "Implemented and maintained key modules in production codebase",
       "Participated in debugging and issue resolution with senior engineers",
       "Followed team standards across code review, Git flow, and delivery",
+      "Wrote and refined SQL queries for core application features",
+      "Improved UI consistency and responsiveness across internal pages",
     ],
     highlights: [
       "Implemented and maintained application features",
@@ -496,6 +502,33 @@ export const experienceTimeline: ExperienceItem[] = [
     skills: ["React", "Node.js", "SQL", "Git"],
     color: "violet",
     image: "/experiences/asoft.png",
+  },
+  {
+    id: 4,
+    icon: "current",
+    label: "Current",
+    title: "AI-Holyann (HOEX)",
+    subtitle: "AI Engineer & Tech Lead",
+    period: "2025 - Present",
+    status: "Core team member",
+    location: "Ho Chi Minh City, Vietnam",
+    description:
+      "Building Holyann Explore, a study-abroad guidance platform that helps students understand themselves, choose suitable majors, and plan long-term development.",
+    contribution: [
+      "Led technical direction and task distribution across the team",
+      "Designed and implemented AI modules for profile analysis and recommendations",
+      "Collaborated on full-stack features for student and counselor workflows",
+      "Defined architecture decisions for scalable multi-role dashboard flows",
+      "Supported testing, feedback loops, and iterative product improvement",
+    ],
+    highlights: [
+      "Developed AI-first features for practical educational use cases",
+      "Improved product structure for multi-role users (student, counselor, admin)",
+      "Contributed to scalable architecture for long-term roadmap",
+    ],
+    skills: ["AI Engineering", "System Design", "Next.js", "TypeScript"],
+    color: "emerald",
+    image: "/experiences/hoex.png",
   },
 ];
 
